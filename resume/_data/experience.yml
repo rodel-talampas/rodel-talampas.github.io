@@ -1,0 +1,52 @@
+# Jobs
+# Embed International
+- company: Embed International (Helix Leisure Perth)
+  position: 
+    - title: Solution Architect
+      duration: May, 2017 &mdash; Present
+      summaries:
+        - summary: One of the key personnel to drive Technology upgrades and a subject matter expert for Technology Trends. Some of the tasks include
+          details: 
+          - detail: AWS Cloud Architecturing and Engineering
+          - detail: System Application Design Reviewer
+          - detail: Reseach Technology Trends and apply to existing systems
+          - detail: Lead the team in performing Continuous Integration Tasks using Chef, Maven, Artifactory and Jenkins 
+          - detail: Traveling to customers to understand their product needs
+
+- company: Helix Leisure Singapore
+  position: 
+    - title: Solution Architect
+      duration: July, 2016 &mdash; March, 2017
+      summaries:
+        - summary: Promoted as one of the personnel to drive Technology upgrades in the company. Some of the tasks include 
+          details:
+          - detail: AWS Cloud Architecturing and Engineering
+          - detail: System Application Design Reviewer
+          - detail: Reseach Technology Trends and apply to existing systems
+          - detail: Lead the team in performing Continuous Integration Tasks using Chef, Maven, Artifactory and Jenkins 
+          - detail: Traveling to customers to understand their product needs
+    - title: Senior Software Developer
+      duration: May, 2015 &mdash; June, 2016
+      summaries:
+        - summary: As the lead product specialist of The Locker Network, accountable for the re-architecting of the system from ground up. The existing system was built in the late 2000 using VB 6 and is already too old to maintain. Some of the tasks include 
+          details:
+          - detail: Provides POC applications that will enable the Management Team to decide the future of the application
+            subdetails:
+            - subdetail: This includes but not limited to changing of OS from Windows Embedded to Ubuntu Embedded, accessing in-house PCBs using Java Embedded, redesign the UI using JavaFX and accessing other serial and usb devices such as Card Readers and Bill Acceptors
+            - subdetail: Provides in-depth documentation on the POC by providing wiki pages on request and responses of the IO devices
+            - subdetail: Conceptualize and create a new architecture of the next generation Locker System
+          - detail: Spearheaded the conceptualization, development and deployment of the new Locker System
+            subdetails:
+            - subdetail: Used the POC as the base for the design and implementation of the IO framework
+            - subdetail: Created a Java FX framework on Screen Navigation – Create Java FX Screens and you can change the next target screen by just doing DB DML Scripts rather than modifying the code and build
+            - subdetail: Connected the Application through the cloud by sending Locker-Based Events for future Big Data Concepts
+            - subdetail: Connected the Application through the cloud by sending Locker-Based Events for future Big Data Concepts
+          - detail: Successfully deployed the software on a Pilot Customer in Sevierville, Tennessee
+          - detail: Traveling to customers to understand their product needs
+        - summary: As a senior developer of the team, am accountable in providing backend solution API for usage in Helix’s Portal Application and Cloud Base System
+          details:
+          - detail: Provides EJB 3.0 Modules that connects to AWS Cloud Base Warehouse Database for Portal Reports and Online Information System
+          - detail: Provides Hadoop Administration Services, setting up Hadoop Cluster Servers on local VMs for local usage of MapReduce Applications
+          - detail: Lead the team in performing Continuous Integration Tasks using Chef, Maven, Artifactory and Jenkins 
+      
+      

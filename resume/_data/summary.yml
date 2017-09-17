@@ -1,0 +1,33 @@
+# Summary
+# IT Professional 19 Years
+- summary: IT Professional with 19 years of total working experience
+  context: 
+  - description: 16 years of Professional Application Development Experience (Java /J2EE, .Net and PL/SQL Programming)
+  - description: 2 years of Cloud Architecture Engineering using AWS and AWS Tools
+  - description: 3 years of Academic Teaching Experience (e.g. Programming Concepts, Data Structure, Algebra, Design Concepts)
+
+- summary: A Leader in his own rights
+  context:
+  - description: Software Team Leader/Development Manager/Technical Leader/Solutions Architect for the past 7 years
+
+- summary: Project includes the following Domain Spaces
+  context: 
+  - description: Out Of Home Entertainment Systems (Leisure Parks, Arcades and Game Cards)
+  - description: TSM (Trusted Service Management) and NFC (Near Field Communication)
+  - description: Logistics and Supply Chain Management
+  - description: Retail and Customer Order Management
+  - description: Telecoms, Billing, Office Administration and Finance
+ 
+- summary: Graduated with Honors
+  context: 
+  - description: Cum Laude
+  - description: Bachelor of Science in Computer Science - De La Salle University Dasmarinas Philippines
+
+- summary: Technical Skills includes the following Skill Sets
+  context: 
+  - description: Programming - Java/J2EE 1.8 and below, VB 6.0, C#.net, Web Services, Ruby, Python
+  - description: Server - JBoss 6/7, Wildfly 9/10/11rc, Tomcat 6/7, Weblogic 10, Webspere 5.1, Jenkins CI, Apache Server, Nginx, IIS, Transaction Servers
+  - description: Frameworks - JavaFX, Spring 3.0, Struts 2.x, CXF WebService Framework, MyBatis (IBatis), Log4j, Logback, SLF4J, Ant, Maven, JSON, JavaScript, VB Script, HTML
+  - description: Cloud Computing - Amazon Web Services including Cloudformation Template, EC2, RDS, DynamoDB, Route53, API Gateway and Lambda
+  - description: Databases - mySQL, Postgresql, Oracle, Microsoft SQL Server, MariaDB, Greenplum
+  
