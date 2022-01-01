@@ -1,0 +1,21 @@
+<div id="content">
+    <picture>
+        <source
+            media="(orientation: landscape)"
+            srcset="images/{{ site.bimage_small }} 320w,
+                    images/{{ site.bimage_medium }} 800w,
+                    images/{{ site.bimage_large }} 1200w"
+            sizes="(min-width: 60rem) 80vw,
+                (min-width: 40rem) 90vw,
+                100vw">
+        <source
+            media="(orientation: portrait)"
+            srcset="images/{{ site.port_bimage_small }} 160w,
+                    images/{{ site.port_bimage_medium }} 400w,
+                    images/{{ site.port_bimage_large }} 600w"
+            sizes="(min-width: 60rem) 80vw,
+                (min-width: 40rem) 90vw,
+                100vw">
+        <img src="images/{{ site.bimage_small }}" alt="I am Rodel!">
+    </picture>
+</div>
