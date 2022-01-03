@@ -81,63 +81,159 @@ educationcomplete:
 experiences:
     - role: Lead Solutions Architect | Senior DevOps Engineer
       company: Ooh! Media
+      location: Sydney, Australia
       time: Feb 2020 - Current
       details: |
 
     - role: Lead Cloud Architect
       company: Oovvuu
+      location: Sydney, Australia
       time: May 2019 - Feb 2020
       details: |
 
     - role: Cloud Architect | Senior Cloud Engineer 
       company: Gruden | The Citadel Group
+      location: Sydney, Australia
       time: Jun 2018 - May 2019
-      details: |
+      details: 
+      - Study and document the Cloud infrastructure of different Government clients throughout NSW, ACT and VIC
+      - Lead a group of Cloud Engineer that monitors and enhances each Cloud Infrastructure of our clients, this includes but not limited to Daily Monitoring, development and modification of server bootstrap scripts
+      - Provide Application and Cloud Architecture Solutions to managed/developed applications of clients in Coldfusion, Java and C#.net
+      - Lead the Development of a Serverless Project, using Serverless Framework, Lambda, Python, C# .Net, SQS and CloudSearch, that collates Company information using its ABN (Australian Business Number)
+      - Lead the Development of a Serverless Project, using Serverless Framework, Lambda, Python, C# .Net and CloudSearch, provides an API that conforms to OCDS 1.1 API Standards (Open Contracting Data Standard)
 
     - role: Solutions Architect | Senior Software Developer
       company: BookingBoss | Embed | Helix Leisure
+      location: Sydney, Australia | Perth, Australia | Singapore
       time: May 2015 - Jun 2018
-      details: |            
+      details: 
+      - Study existing Cloud Infrastructure of Booking Boss and Migrate them into Helix Leisure’s own Cloud Ecosystem.
+      - Created an Open Source Chef Cookbook for Window Base Configuration of GNU GPG (https://github.com/ledorsapmalat/gnugpg)
+      - Created an Open Source Chef Cookbook that wraps Knife Functionality to update Chef Server Attributes (https://github.com/ledorsapmalat/chef-attributes)
+      - Prepare Cloudformation Templates that will initiate a Continuous Integration Environment and Production Deployment Arena for Booking Boss
+      - Prepare Booking Boss Chef Cookbooks and Recipes that serves as the kicker of the Continuous Integration Process leveraging the use of the Open Source cookbooks created
+      - Enhance Java Build process by upgrading gradle build and converted Jetty to Gretty automated unit testing server
+      - Provide ideas on converting the current Aspect-Oriented and ORM solution to JPA Solution
+      - Provide CI/CD implementations using Jenkins Server with Blue Ocean plugin and Groovy scripting      
+      - Initiate the use of 3rd Party Open Source Softwares such as Gluu and Keycloak for IAM Integration and Single-Sign-On processes
+      - Bring Up Keycloak IAM Server in the AWS Cloud leveraging Cloudformation Templates and Chef as Configuration Management
+      - Develop Java API Extensions as Restful Services from extending Keycloak API
+      - Develop Basic Angular 2.0 Applications that leverages the API Extensions created for keycloak to create a customized UI for Operations to use in creating customer profiles
+      - Create POC for a Report Java Web Application using Wildfly and Vaadin Framework
+      - Create a new EJB Application that retrieves Embed Card information leveraging Hibernate/JPA technologies connecting to AWS RDS and AWS Redshift
+      - Bring up a Wildfly Server in the AWS Cloud leveraging Cloudformation Templates and Chef as Configuration Management. The POC Report is deployed in this stack leveraging websocket technology and AWS Application Load Balancers.
+      - Studying Serverless Technology such as AWS Lambda leveraging on Python as the scripting Technology and AWS API Gateway (acting as the “endpoint”) and serverless.com framework as the provisioning tool.
+      - Provide CI/CD implementations using Jenkins Server with Blue Ocean plugin and ​ Groovy​ scripting. Leverage Chef and AWS S3 for Continuous Delivery.      
+      - Study and documented the process of the Legacy Locker Network System developed in VB 6.0 as a standalone application running in windows server 2007
+      - Re-engineered a prototype Locker Network System that is completely Java based (JPA and Spring for configuration, Java IO for accessing PCBs and Input Devices such as Credit Card Readers, Java Threads for multi-processing and Java FX as the Front End UI) and running on a small linux footprint (Lubuntu)
+      - Created an Open Source Project for JavaFX Page Transitioning creating a personal Annotation for use in the Transition and JPA for Page Configuration (https://github.com/ledorsapmalat/FXScreenNavigationFramework)
+      - Conceptualize the FINAL Locker Network Product, document it and develop in Sprints. Created an Installer file using 3rd Party Tool called IZPACK
+      - Created an Open Source Project to customized and create an automated Ubuntu Server Installation (https://github.com/ledorsapmalat/custom_ubuntu)
+      - Create a Helix Ubuntu Installation USB Stick that automates not only the Ubuntu Server Installation but also the Locker Network Installation using Chef as the Configuration Management System
+      - Provide CI/CD implementations using Jenkins Server with Blue Ocean plugin and Groovy scripting. Leverage Chef and AWS S3 for Continuous Delivery.
+      - Documented and Trained the Locker Network Operations Team in Dallas Texas, USA
+      - Enhanced existing EJB 3.0 Modules used in the Report System Developed using Liferay API and Liferay Application Server.
+      - Provided a Local Hadoop Server and Cluster Servers using Chef as the Configuration Management. Trained for Hadoop and Spark programming to understand the concept of Helix Data Warehousing Project
+      - Part of the team that spearheaded a POC Project (Account Management System) leveraging on Wildfly 10 as the Application Server, JPA as the backend layer and JSF as the Front End.                  
 
     - role: Software Development Team Leader | Technical Lead
       company: Cassis International | Morpho Cards Pte. Ltd.
+      location: Infinite Studios, Singapore
       time: May 2012 - Apr 2015
-      details: |                     
+      details: 
+      - Lead designer for the design and implementation of AFSCM 2.1 Message Protocol Implementation.
+      - Acted as the Project Coordinator (Development Team) for the Globe Cash Phase 1 Project.
+      - Work with Project Team on providing estimates and timelines during Planning Stage and Budget proposal.
+      - Provide Technical Documentations for used of other developers.
+      - Monitor developers through constant tutoring and monitoring of tasks at hand.
+      - Developed Web Service Modules that serves as relay hub to external parties.
+      - Re-engineered and documented the existing Request Manager SOAP Service enhancing the Authentication and Security of the Web Services provided by the company via implementation of the WS_SECURITY. It uses apache 3rd party software CXF and recreate the SOAP Services extending the Global Platform and AFSCM Message Protocols for NFC Provisioning.
+      - Re-Designed the Application Configuration using Spring Resource
+      - Re-Designed the Data Layer using myBatis as the persistence framework connecting to Oracle DB
+      - Spearhead the upgrade of JBoss EAP 4.3 to JBoss EAP 5.0 to JBoss EAP 6.0.
+      - Moved Java Development from Java SDK 1.4 to Java SDK 1.6
+      - Provide L1 Support for Production Issues that L2/L3 Group cannot resolve
+      - Leverage the usage of Subversion as the Source Control Management                       
+      - People Manager managing sprint tasks and resources from a group of 2 - 4 permanent hires and 2-10 consultants locally and abroad
 
     - role: Solutions Architect | Technical Lead | Senior Developer
       company: Inttra
+      location: Raffles, Singapore
       time: Sep 2006 - Apr 2012
-      details: |                     
+      details:
+      - Lead designer for the design and implementation of trade and logistics applications ranging from web-applications through data integration applications.
+      - Work with Project Team on providing estimates and timelines during Planning Stage and Budget proposal.
+      - Provide Technical Documentations for used of other developers.
+      - Liaise with the Business Analyst in finalizing business requirements and functional design.
+      - Manage developers through constant tutoring and monitoring of tasks at hand.
+      - Liaise with Lead Engineering Architect and DB Architect on my design proposal to reduce technical debt.
+      - Liaise with QA Group on finalizing Functional Test Requirements and Stress Test Criteria.
+      - Provide hand-over training and documentations to Product Support Team
+      - Lead Developer for the implementation of Trade and Logistics web-applications and Reporting Module.
+      - Lead Developer to design db table structure used by web-applications using normalization techniques.
+      - Provide Technical Documentations for used of other developers.
+      - Liase with Project Management to provide estimates during Project Planning.
+      - Manage developers through constant tutoring and monitoring of tasks at hand.
+      - Liaise with the Business Analysts in finalizing business requirements and functional design.
+      - Liaise with DB Architect on my design proposal to reduce technical debt.
+      - Liaise with Infrastructure Team on new requirements on Hardware changes.
+      - Liaise with QA on test requirements
+      - Enforce best practices and code quality to reduce technical debt
 
     - role: Software Developer Consultant
       company: Crimsonlogic
+      location: Science Park Road, Singapore
       time: Sep 2005 - Aug 2006
-      details: |   
+      details:
+      - Acted as the one of the Trade and Logistics Web Developer by analyzing the requirements by Singapore Customs in creating or update solutions
+      - Provide Technical/Functional Documents to capture the design that has been proposed and created
+      - Acted as the Lead Batch API developer to enhance the batch systems of Crimsonlogic
+      - Liaise with QA on test requirements
+      - Enforce best practices and code quality to reduce technical debt
 
     - role: Java Technical Lead | Senior Systems Engineer
       company: Accenture
+      location: Makati, Philippines
       time: Jun 2003 - Aug 2005
-      details: |   
+      details:
+      - Tasked to lead a group of Java Developers for maintenance update and new screen requirements of the Customer Order System
+      - Provide Technical Specifications Documents as a deliverable for ISO certification
+      - Provide monitoring or mentorship to Junior Developers to ensure best practices and code quality
+      - Liaise with Product Manager and Development Manager based on Williams Sonoma on functional requirements
+      - Liaise with Team Lead in Williams Sonoma to finalize on test requirements
 
     - role: Systems Engineer
       company: Telic Communications
+      location: Mandaluyong, Philippines
       time: Apr 2002 - Jun 2003
-      details: |         
+      details:     
+      - Lead the implementation of VOIP applications using SOAP based communication between Telic and Client Banks.
+      - Implemented a web-based Billing Portal for Telic's clients, as one of the Web Developer.
+      - Prepare Technical Specifications Documents as a deliverable for ISO certification
+      - Liaise with Sales Manager and Development Manager on functional requirements   
 
     - role: Software Developer
       company: International Container Terminal Services Inc.
+      location: North Harbor, Manila, Philippines
       time: Sep 2000 - Apr 2002
-      details: |   
+      details:
+      - Lead Analyst to gather specifications and requirements from External Clients to use online Billing Payment applications.
+      - Lead Developer to design and implement iBox (ICTSI's first online Billing Payment Gateway).
+      - Prepare Technical Specifications Documents as a deliverable for ISO certification
+      - Provide training to Customers of ICTSI  
 
     - role: Web Developer
       company: Trust International
+      location: Riyadh, Saudi Arabia
       time: Aug 1999 - Aug 2000
       details: |         
 
     - role: Instructor
       company: De La Salle University Dasmarinas | Systems Technology Institute
+      location: Cavite, Philippines
       time: Jun 1997 - Apr 1999
-      details: |         
+      details: |       
+      
 
     #- role: Senior Software Engineer
       #time: 2014 - 2015
