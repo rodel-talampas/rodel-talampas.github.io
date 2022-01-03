@@ -78,23 +78,66 @@ educationcomplete:
       details: |     
 
 
-#experiences:
-    #- role: Lead Developer
-      #time: 2015 - Present
-      #company: Startup Hubs, San Francisco
-      #details: |
-        #Describe your role here lorem ipsum dolor sit amet, consectetuer
-        #adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        #Cum sociis natoque penatibus et magnis dis parturient montes,
-        #nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        #pellentesque eu, pretium quis, sem. Nulla consequat massa quis
-        #enim. Donec pede justo. Sed ut perspiciatis unde omnis iste natus
-        #error sit voluptatem accusantium doloremque laudantium, totam rem
-        #aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-        #architecto beatae vitae dicta sunt explicabo.
+experiences:
+    - role: Lead Solutions Architect | Senior DevOps Engineer
+      company: Ooh! Media
+      time: Feb 2020 - Current
+      details: |
 
-          #- Bullet point
-          #- Bullet point
+    - role: Lead Cloud Architect
+      company: Oovvuu
+      time: May 2019 - Feb 2020
+      details: |
+
+    - role: Senior Cloud Engineer | Cloud Architect
+      company: Gruden | The Citadel Group
+      time: Jun 2018 - May 2019
+      details: |
+
+    - role: Solutions Architect | Senior Software Developer
+      company: BookingBoss | Embed | Helix Leisure
+      time: May 2015 - Jun 2018
+      details: |            
+
+    - role: Software Development Team Leader | Technical Lead
+      company: Cassis International | Morpho Cards Pte. Ltd.
+      time: May 2012 - Apr 2015
+      details: |                     
+
+    - role: Solutions Architect | Technical Lead | Senior Developer
+      company: Inttra
+      time: Sep 2006 - Apr 2012
+      details: |                     
+
+    - role: Software Developer Consultant
+      company: Crimsonlogic
+      time: Sep 2005 - Aug 2006
+      details: |   
+
+    - role: Java Technical Lead | Senior Systems Engineer
+      company: Accenture
+      time: Jun 2003 - Aug 2005
+      details: |   
+
+    - role: Systems Engineer
+      company: Telic Communications
+      time: Apr 2002 - Jun 2003
+      details: |         
+
+    - role: Software Developer
+      company: International Container Terminal Services Inc.
+      time: Sep 2000 - Apr 2002
+      details: |   
+
+    - role: Web Developer
+      company: Trust International
+      time: Aug 1999 - Aug 2000
+      details: |         
+
+    - role: Instructor
+      company: De La Salle University Dasmarinas | Systems Technology Institute
+      time: Jun 1997 - Apr 1999
+      details: |         
 
     #- role: Senior Software Engineer
       #time: 2014 - 2015
