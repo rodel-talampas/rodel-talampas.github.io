@@ -19,15 +19,24 @@
         <div class="time">{{ experience.time }}</div>
       </div><!--//upper-row-->
       <div class="company">{{ experience.company }} [{{ experience.location }}]</div>
-     
-
     </div><!--//meta-->
+
+    {% if experience.description %}
+    <div class="details">
+      {{ experience.description }}
+    </div><!--//description-->
+    {% endif %}
 
     {% if experience.details %}
     <div>
       <ul style="list-style-type:disc">
       {% for detail in experience.details %}
-      <li>{{ detail }}</li>
+      <li>
+        {{ detail }}
+        {% if detail.link %}
+        [ {{ detail.link }} ]
+        {% endif %}    
+      </li>
       {% endfor %}
       </ul>
     </div><!--//details-->

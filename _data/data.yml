@@ -5,12 +5,16 @@
 sidebar:
     about: False # set to False or comment line if you want to remove the "how to use?" in the sidebar
     education: True # set to False if you want education in main section instead of in sidebar
+    opensource: True
+    projects: True
+    skills: True
 
     # Profile information
     name: Rodel Talampas
     tagline: Lead Solutions Architect | Designer | Developer
     avatar: rodel.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
-
+    awscert: AWS_Certified_Logo_SAA_294x230_Color.png
+    awslink: https://www.credly.com/badges/78c65211-4ab4-46d0-a758-d6ac69af54f3/public_url
     # Sidebar links
     email: rodel.talampas@gmail.com
     phone: 
@@ -35,10 +39,33 @@ sidebar:
 
     interests:
       - item: Basketball
-        link:
+        link: 
 
       - item: Gaming
         link:
+
+    skills:
+      - item: Java Full Stack (JSP, JSF, API, HTML, CSS, JavaScript)
+        link:
+
+      - item: Python Full Stack (Django, Flask)
+        link:
+
+      - item: AWS Stack (EC2, RDS, SNS, SQS, ECS, Lambda, Cloudwatch, CodeCommit, CodeBuild, CodePipeline, Code Deploy,  ElasticSearch, etc.)
+        link:
+
+      - item: DevOps (Terraform, Cloudformation, Docker, Kubernetes, Github, Git Actions, Chef, Ansible, Grafana, Prometheus, Jenkins, Concourse, AWS CodePipeline and CodeBuild)
+        link:
+
+      - item: Java Frameworks (JavaFX, Spring, CXF, Hibernate, MyBatis, Log4j, Logback)
+        link:
+
+      - item: Code Build and Compilers (Ant, Maven, Gradle)
+        link:
+
+      - item: Databases (MariaDB, MySQL, PostGres, Oracle, Redshift, Aurora, GreenPlum, Derby)
+        link:
+
 
 career-profile:
     title: Career Profile
@@ -56,6 +83,8 @@ news:
     posts:
         - time: 202x
           title: Test
+
+
 
 education:
     - degree: Master of Science in Computer Science
@@ -77,89 +106,96 @@ educationcomplete:
       time: 1993 June - 1997 April
       details: |     
 
-
 experiences:
     - role: Lead Solutions Architect | Senior DevOps Engineer
       company: Ooh! Media
       location: Sydney, Australia
       time: Feb 2020 - Current
-      details: |
+      description: oOh!media is changing the face of the Out of Home industry in Australia. Its combination of reach across 35,000 locations Australia-wide, its diverse product range, and its market-leading data insight, makes brands powerfully unmissable.
+      details: 
+      - Study and document the Existing Cloud infrastructure of oOh!media 
+      - Support Development and Application Teams on Product and Application Infrastructure using Terraform as IaC and Packer as an AMI Tool
+      - Create/Upgrade Container and Kubernetes Pods that is primarily used by our CICD Pipeline (Concourse) and Metrics Dashboard (Grafana/Prometheus/InfluxDB)
+      - Create/Upgrade Concourse Pipelines that perform Continuous Integration and Deployment of all underlying AWS Infrastructure
+      - Design and Architected in-house projects that used integrations with different 3rd party vendors
+      - Implement Security Best Practices within the oOh!Media Code Base in Github
+      - Implement Dynatrace monitoring all throughout AWS Stack
+      - Started moving Concourse Pipelines into Git Actions
 
     - role: Lead Cloud Architect
       company: Oovvuu
       location: Sydney, Australia
       time: May 2019 - Feb 2020
-      details: |
+      description: Oovvuu’s mission is to put a video in every article; to tell trusted news to a billion people and repatriate billions from Facebook and Google back to the publishers and broadcasters who diligently and fearlessly report the world around us.
+      details:
+      - Study and document the Existing Cloud infrastructure of Oovvuu and document and propose a final infrastructure for a Migration into new AWS Accounts
+      - Automate the process of bootstrapping Oovvuu AWS Resources using Cloudformation
+      - Automate Build and Deployment of Oovvuu Applications through Serverless Framework, AWS CICD Build and Deploy Pipeline
+      - Support current production workload by fixing bugs in  Python-Based Lambda Functions or create new Lambda Functions that are triggered by Portal Applications.
+
 
     - role: Cloud Architect | Senior Cloud Engineer 
       company: Gruden | The Citadel Group
       location: Sydney, Australia
       time: Jun 2018 - May 2019
+      description: Part of Citadel Group of Companies, Gruden focuses on helping clients implement measurable, digital investment to enhance client’s customer experience and growth using different cloud technologies.
       details: 
       - Study and document the Cloud infrastructure of different Government clients throughout NSW, ACT and VIC
       - Lead a group of Cloud Engineer that monitors and enhances each Cloud Infrastructure of our clients, this includes but not limited to Daily Monitoring, development and modification of server bootstrap scripts
       - Provide Application and Cloud Architecture Solutions to managed/developed applications of clients in Coldfusion, Java and C#.net
       - Lead the Development of a Serverless Project, using Serverless Framework, Lambda, Python, C# .Net, SQS and CloudSearch, that collates Company information using its ABN (Australian Business Number)
       - Lead the Development of a Serverless Project, using Serverless Framework, Lambda, Python, C# .Net and CloudSearch, provides an API that conforms to OCDS 1.1 API Standards (Open Contracting Data Standard)
+      - Lead the migration of old versions of Atlassian Servers (Jira and Confluence) to newer versions through automation using AWS Cloudformation and AWS Client scripting.
 
     - role: Solutions Architect | Senior Software Developer
-      company: BookingBoss | Embed | Helix Leisure
+      company: LockerNetwork | BookingBoss | Embed | Helix Leisure
       location: Sydney, Australia | Perth, Australia | Singapore
       time: May 2015 - Jun 2018
+      description: Helix Leisure offers out-of-home entertainment with technology-driven products and services that result in a fantastic on-site consumer experience. Umbrella companies in Dallas (LockerNetwork), Perth (Embed Card) and Sydney (BookingBoss) provide software solutions to clients’ businesses, enhancing their customer experience to the fullest.
       details: 
-      - Study existing Cloud Infrastructure of Booking Boss and Migrate them into Helix Leisure’s own Cloud Ecosystem.
-      - Created an Open Source Chef Cookbook for Window Base Configuration of GNU GPG (https://github.com/ledorsapmalat/gnugpg)
-      - Created an Open Source Chef Cookbook that wraps Knife Functionality to update Chef Server Attributes (https://github.com/ledorsapmalat/chef-attributes)
-      - Prepare Cloudformation Templates that will initiate a Continuous Integration Environment and Production Deployment Arena for Booking Boss
-      - Prepare Booking Boss Chef Cookbooks and Recipes that serves as the kicker of the Continuous Integration Process leveraging the use of the Open Source cookbooks created
-      - Enhance Java Build process by upgrading gradle build and converted Jetty to Gretty automated unit testing server
-      - Provide ideas on converting the current Aspect-Oriented and ORM solution to JPA Solution
-      - Provide CI/CD implementations using Jenkins Server with Blue Ocean plugin and Groovy scripting      
-      - Initiate the use of 3rd Party Open Source Softwares such as Gluu and Keycloak for IAM Integration and Single-Sign-On processes
-      - Bring Up Keycloak IAM Server in the AWS Cloud leveraging Cloudformation Templates and Chef as Configuration Management
-      - Develop Java API Extensions as Restful Services from extending Keycloak API
-      - Develop Basic Angular 2.0 Applications that leverages the API Extensions created for keycloak to create a customized UI for Operations to use in creating customer profiles
-      - Create POC for a Report Java Web Application using Wildfly and Vaadin Framework
-      - Create a new EJB Application that retrieves Embed Card information leveraging Hibernate/JPA technologies connecting to AWS RDS and AWS Redshift
-      - Bring up a Wildfly Server in the AWS Cloud leveraging Cloudformation Templates and Chef as Configuration Management. The POC Report is deployed in this stack leveraging websocket technology and AWS Application Load Balancers.
-      - Studying Serverless Technology such as AWS Lambda leveraging on Python as the scripting Technology and AWS API Gateway (acting as the “endpoint”) and serverless.com framework as the provisioning tool.
-      - Provide CI/CD implementations using Jenkins Server with Blue Ocean plugin and ​ Groovy​ scripting. Leverage Chef and AWS S3 for Continuous Delivery.      
-      - Study and documented the process of the Legacy Locker Network System developed in VB 6.0 as a standalone application running in windows server 2007
       - Re-engineered a prototype Locker Network System that is completely Java based (JPA and Spring for configuration, Java IO for accessing PCBs and Input Devices such as Credit Card Readers, Java Threads for multi-processing and Java FX as the Front End UI) and running on a small linux footprint (Lubuntu)
       - Created an Open Source Project for JavaFX Page Transitioning creating a personal Annotation for use in the Transition and JPA for Page Configuration (https://github.com/ledorsapmalat/FXScreenNavigationFramework)
-      - Conceptualize the FINAL Locker Network Product, document it and develop in Sprints. Created an Installer file using 3rd Party Tool called IZPACK
-      - Created an Open Source Project to customized and create an automated Ubuntu Server Installation (https://github.com/ledorsapmalat/custom_ubuntu)
-      - Create a Helix Ubuntu Installation USB Stick that automates not only the Ubuntu Server Installation but also the Locker Network Installation using Chef as the Configuration Management System
-      - Provide CI/CD implementations using Jenkins Server with Blue Ocean plugin and Groovy scripting. Leverage Chef and AWS S3 for Continuous Delivery.
+      - Created an Open Source Project to customized and create an automated Ubuntu Server Installation (see opensource projects)
+      - Leverage the Open Source Projects created to finalize Locker Network Product, created an  Installer file using 3rd Party Tool called IZPACK and automate the Ubuntu Server Installation and Locker Network Installation using Chef as the Configuration Management System
+      - Traveled to the Helix Leisure Factory in Jakarta, Indonesia to facilitate the QA Testing of the Locker Network Overall System and the new Operating System and Locker Network Software
+      - Traveled to customer sites in TN USA to present the deployment of the new Locker Network using the new USB Helix Ubuntu Server
       - Documented and Trained the Locker Network Operations Team in Dallas Texas, USA
       - Enhanced existing EJB 3.0 Modules used in the Report System Developed using Liferay API and Liferay Application Server.
       - Provided a Local Hadoop Server and Cluster Servers using Chef as the Configuration Management. Trained for Hadoop and Spark programming to understand the concept of Helix Data Warehousing Project
-      - Part of the team that spearheaded a POC Project (Account Management System) leveraging on Wildfly 10 as the Application Server, JPA as the backend layer and JSF as the Front End.                  
+      - Part of the team that spearheaded a POC Project (Account Management System) leveraging on Wildfly 10 as the Application Server, JPA as the backend layer and JSF as the Front End.
+      - Initiate the use of 3rd Party Open Source Softwares such as Gluu and Keycloak for IAM Integration and Single-Sign-On processes
+      - Bring Up Keycloak IAM Server in the AWS Cloud leveraging Cloudformation Templates and Chef as Configuration Management
+      - Develop Java API Extensions as Restful Services from extending Keycloak API 
+      - Develop Basic Angular 2.0 Applications that leverages the API Extensions created for keycloak to create a customized UI for Operations to use in creating customer profiles
+      - Create a new EJB Application that retrieves Embed Card information leveraging Hibernate/JPA technologies connecting to AWS RDS and AWS Redshift
+      - Bring up a Wildfly Server in the AWS Cloud leveraging Cloudformation Templates and Chef as Configuration Management. The POC Report is deployed in this stack leveraging websocket technology and AWS Application Load Balancers
+      - Study existing Cloud Infrastructure of Booking Boss and Migrate them into Helix Leisure’s own Cloud Ecosystem.
+      - Created an Open Source Chef Cookbook for Window Base Configuration of GNU GPG (see opensource projects)
+      - Created an Open Source Chef Cookbook that wraps Knife Functionality to update Chef Server Attributes (see opensource projects)
+      - Prepare Cloudformation Templates that will initiate a Continuous Integration Environment and Production Deployment Arena for Booking Boss 
+      - Prepare Booking Boss Chef Cookbooks and Recipes that serves as the kicker of the Continuous Integration Process leveraging the use of the Open Source cookbooks created
+      - Enhance Java Build process by upgrading gradle build and converted Jetty to Gretty automated unit testing server 
+      - Provide assistance in bringing up .Net Embed Applications in AWS cloud using Cloudformation Templates and Chef 
+      - Provide a POC of the next generation .Net Embed Application in AWS cloud leveraging the use Cloudformation Template as the provisioning tool, Chef and Octopus as Configuration Management and Zabbix as a monitoring agent
+      - Provide CI/CD implementations using Jenkins Server with Blue Ocean plugin and Groovy scripting. Leverage Chef and AWS S3 for Continuous Delivery.
 
     - role: Software Development Team Leader | Technical Lead
       company: Cassis International | Morpho Cards Pte. Ltd.
       location: Infinite Studios, Singapore
       time: May 2012 - Apr 2015
+      description: Morpho is the pioneer in Card Security. Bought Cassis International who is the pioneer in TSM Provisioning before Apple Pay and Samsung Pay were ever released.
       details: 
-      - Lead designer for the design and implementation of AFSCM 2.1 Message Protocol Implementation.
-      - Acted as the Project Coordinator (Development Team) for the Globe Cash Phase 1 Project.
-      - Work with Project Team on providing estimates and timelines during Planning Stage and Budget proposal.
-      - Provide Technical Documentations for used of other developers.
-      - Monitor developers through constant tutoring and monitoring of tasks at hand.
-      - Developed Web Service Modules that serves as relay hub to external parties.
-      - Re-engineered and documented the existing Request Manager SOAP Service enhancing the Authentication and Security of the Web Services provided by the company via implementation of the WS_SECURITY. It uses apache 3rd party software CXF and recreate the SOAP Services extending the Global Platform and AFSCM Message Protocols for NFC Provisioning.
-      - Re-Designed the Application Configuration using Spring Resource
-      - Re-Designed the Data Layer using myBatis as the persistence framework connecting to Oracle DB
-      - Spearhead the upgrade of JBoss EAP 4.3 to JBoss EAP 5.0 to JBoss EAP 6.0.
-      - Moved Java Development from Java SDK 1.4 to Java SDK 1.6
-      - Provide L1 Support for Production Issues that L2/L3 Group cannot resolve
-      - Leverage the usage of Subversion as the Source Control Management                       
       - People Manager managing sprint tasks and resources from a group of 2 - 4 permanent hires and 2-10 consultants locally and abroad
+      - Re-engineered and documented the existing Request Manager SOAP Service enhancing the Authentication and Security of the Web Services provided by the company via implementation of the WS_SECURITY. It uses apache 3rd party software CXF and recreates the SOAP Services extending the Global Platform and AFSCM Message Protocols for NFC Provisioning.
+      - Re-Designed the Application Configuration using Spring Resource and myBatis as the persistence framework connecting to Oracle DB
+      - Spearhead the upgrade of JBoss EAP 4.3 to JBoss EAP 5.0 to JBoss EAP 6.0 and moved Java Development from Java SDK 1.4 to Java SDK 1.6
+      - Provide L1 Support for Production Issues that L2/L3 Group cannot resolve
 
     - role: Solutions Architect | Technical Lead | Senior Developer
       company: Inttra
       location: Raffles, Singapore
       time: Sep 2006 - Apr 2012
+      description: INTTRA is the world’s largest, multi-carrier network for the ocean shipping industry. 
       details:
       - Lead designer for the design and implementation of trade and logistics applications ranging from web-applications through data integration applications.
       - Work with Project Team on providing estimates and timelines during Planning Stage and Budget proposal.
@@ -184,6 +220,7 @@ experiences:
       company: Crimsonlogic
       location: Science Park Road, Singapore
       time: Sep 2005 - Aug 2006
+      description: Crimsonlogic provides world-class digital services for government agencies globally.
       details:
       - Acted as the one of the Trade and Logistics Web Developer by analyzing the requirements by Singapore Customs in creating or update solutions
       - Provide Technical/Functional Documents to capture the design that has been proposed and created
@@ -195,6 +232,7 @@ experiences:
       company: Accenture
       location: Makati, Philippines
       time: Jun 2003 - Aug 2005
+      description: Accenture is one of the leading management consulting, technology services and outsourcing companies helping clients to become high-performance businesses and government services. The outsourcing project is under RETEK.
       details:
       - Tasked to lead a group of Java Developers for maintenance update and new screen requirements of the Customer Order System
       - Provide Technical Specifications Documents as a deliverable for ISO certification
@@ -224,7 +262,7 @@ experiences:
 
     - role: Web Developer
       company: Trust International
-      location: Riyadh, Saudi Arabia
+      location: Riyadh, Saudi Arabia  
       time: Aug 1999 - Aug 2000
       details: |         
 
@@ -233,61 +271,139 @@ experiences:
       location: Cavite, Philippines
       time: Jun 1997 - Apr 1999
       details: |       
+
+projects:
+    title: Projects
+    intro: | 
+
+    opensource:
+      - title: Chef Cookbook Attributes
+        link: https://github.com/ledorsapmalat/chef-attributes
+        tagline: Manipulate Chef Attributes on Chef Server Node, Role or Environment Level on the fly.
+
+      - title: Chef GNUGPG Config
+        link: https://github.com/ledorsapmalat/gnugpg
+        tagline: Cookbook to deploy gnugpg - a complete and free implementation of the OpenPGP standard.
+
+      - title: Custom Ubuntu Installation
+        link: https://github.com/ledorsapmalat/custom_ubuntu
+        tagline: This project was created to customized a LINUX (Ubuntu Flavor) 32-Bit Server targeting initially for use on a JavaFX Standalone Application. It can be customized based on the needs of individual application.
+
+      - title: JavaFX Screen Navigation Framework
+        link: https://github.com/ledorsapmalat/FXScreenNavigationFramework
+        tagline: The idea of making application screens' navigation button configurable, e.g. the NEXT Button's target screen can change, seems to be a problem that can't be solved. The idea behind this project is to create such framework and making it configurable into the extent that there will be less or no code changes on the actual FX Controller's Button's next screen method.
+          HelixLeisure's TheLockerNetwork Project uses this.
+
+      - title: Austender OCDS Schema
+        link: https://github.com/austender/austender-ocds-api
+        tagline: The project was created to initialize a call to the OCDS API, by Austender, in different languages
       
+      - title: AWS Blue Green Deployment 
+        link: https://github.com/ledorsapmalat/aws-blue-green-deployment
+        tagline: The project was created to easily switch over between new and old AutoScaling group using AWS Cloudformation and Lambda
 
-    #- role: Senior Software Engineer
-      #time: 2014 - 2015
-      #company: Google, London
-      #details: |
-        #Describe your role here lorem ipsum dolor sit amet, consectetuer
-        #adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        #Cum sociis natoque penatibus et magnis dis parturient montes,
-        #nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        #pellentesque eu, pretium quis, sem.
+      - title: Java IO
+        link: https://github.com/ledorsapmalat/jio
+        tagline: JIO is an integrated Java API that combines different open-source IO Libraries like JSSC, HID4JAVA and USB4JAVA to allow seemless integration of different IO Devices like Bill Acceptors, Card Readers and RFIDs.
+          HelixLeisure's TheLockerNetwork Project uses this.
 
-          #- Bullet point
-          #- Bullet point
+      - title: RDS IAM Access (InfraAsCode)
+        link: https://github.com/rodel-talampas/terraform-rds-iam-access
+        tagline: This is a POC template to create an RDS Server and IAM User that can access the said database server via AWS IAM Policy
 
-    #- role: UI Developer
-      #time: 2012 - 2014
-      #company: Amazon, London
-      #details: |
-        #Describe your role here lorem ipsum dolor sit amet, consectetuer
-        #adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        #Cum sociis natoque penatibus et magnis dis parturient montes,
-        #nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        #pellentesque eu, pretium quis, sem.
+    assignments:
+      - title: oOh!Media HR Integration
+        desc: People and Culture 
+        tagline: It is a 3rd Party integration involving Employee Data to and from oOh!Media HR System, involving the likes of CultureAmp, Westpac and Livehire. It revolves using AWS Transfer and AWS Lambdas.
 
-          #- Bullet point
-          #- Bullet point
+      - title: oOh!Media HR Warehouse
+        desc: People and Culture Warehouse 
+        tagline: Using the same AWS Transfer integration, 3rd Party, HR Systems that has integrated with HR, will send Historical Employee Data and internal process will convert it to Data Lake
 
-#projects:
-    #title: Projects
-    #intro: >
-      #You can list your side projects or open source libraries in this
-      #section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      #Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
+      - title: oOh!Media Trading Platform (OTP)
+        desc: Sales and Delivery 
+        tagline: It is an internal nodejs web/api application tool used by the sales team to book ads within different  sites and location here in Australia and New Zealand
 
-    #assignments:
-      #- title: Velocity
-        #link: "#hook"
-        #tagline: "A responsive website template designed to help startups promote, market and sell their products."
+      - title: oOh!Media Avails System
+        desc: Sales and Delivery
+        tagline: It is an internal nodejs rest api application tool used to manage booking schedules      of the sites booked within the OTP Sytem
 
-      #- title: DevStudio
-        #link: "#"
-        #tagline: "A responsive website template designed to help web developers/designers market their services."
+      - title: oOh!Media Inventory System
+        desc: Sales and Delivery 
+        tagline: It is an internal python ORM Flask web application tool used by the sales team to managed leased sites
 
-      #- title: Tempo
-        #link: "#"
-        #tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
+      - title: oOh!Media Snyk Integration 
+        desc: DevOps 
+        tagline: It’s a Snyk Vulnerability Checks executed as part of the CI/CD Pipeline. This project has been replaced by Dynatrace.
 
-      #- title: Atom
-        #link: "#"
-        #tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
+      - title: oOh!Media EKS Migration
+        desc: DevOps 
+        tagline: It’s an AWS EKS Implementation to migrate in-house Kube Applications into an AWS EKS Service
 
-      #- title: Delta
-        #link: "#"
-        #tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
+      - title: oOh!Media XRay
+        desc: DevOps
+        tagline: This is the Dynatrace Monitoring implemenation replacing existing APM Tools
+
+      - title: Oovvuu Compass
+        desc: Analytics Dashboard
+        tagline: It’s a dashboard for video and ads analytics of Oovvuu built using PHP Laravel Framework deployed in AWS
+
+      - title: Oovvuu Feeds
+        desc: Publisher Integration
+        tagline: Feeds are publisher specific, built using AWS Lambda in Python and deployed through Serverless Framework
+
+      - title: Oovvuu Analytics
+        desc: Sales
+        tagline: Oovvuu analytics is a mass project of Python scripts that runs through a schedule. Each publisher has their own schedule. A group of python Lambda Projects ingests ads and video metadata from Video Hosts (Brightcove, DailyMotion and Youtube). 
+
+      - title: OCDS API 
+        desc: Australian Procurement
+        tagline: The Open Contracting Data Standard (OCDS) was created to increase contracting transparency, and allow deeper analysis of contracting data by a wide range of users (See OpenSource Projects)
+
+      - title: The LockerNetwork
+        desc: Outdoor Park Rentals
+        tagline: Re-designed the Locker Renting Application to use Java, Java IO and JavaFX (See OpenSource Projects).
+
+      - title: BookingBoss
+        desc: Park Schedule and Ticketing
+        tagline: It’s a ticketing system online for Leisure Parks. Built using Coldfusion and Java. 
+
+      - title: RequestManager
+        desc: Mobile Security Integration
+        tagline: Using Apache CXF, Request Manager communicates with the Secure Card in Phones through Telco Channels and provisions them to be ready for NFC Transactions.
+
+      - title: AFSCM API
+        desc: Mobile Security Integration
+        tagline: Using Apache CXF, Morpho created an API to support AFSCM or Association Française du Sans Contact Mobile (French association for contactless mobile services). This supports Soap WS-Security as well.
+
+      - title: Global Platform Standard API
+        desc: Mobile Security Integration
+        tagline: Using Apache CXF, Morpho created an API to support GP  or Global Platform for secure digital services and devices. This supports Soap WS-Security as well.
+
+      - title: INTTRA Reports 
+        desc: Inttra Customers
+        tagline: This is a project that uses 3 different technologies. C# for the reporting module, Java and Oracle for the ETL Processing.
+
+      - title: Shipping Instructions
+        desc: Inttra Process and Web
+        tagline: This is a JSP/Java application that creates Shipping Instructions for Bulk Items/Container Handling
+
+      - title: Shipping Instructions Batch
+        desc: Inttra Process and ETL
+        tagline: This is a Java application that reads FTP’d file in EDIFACT or ANSI format that creates Shipping Instructions for Bulk Items/Container Handling
+
+      - title: Track and Trace Portal 
+        desc: Inttra Process and Web
+        tagline: This is a JSP/Java application that traces Container and Container Items handled within the INTTRA Application Network (e.g. Shipping Instructions/Booking)
+
+      - title: Track and Trace Batch
+        desc: Inttra Process and ETL
+        tagline: This is a Java application that reads FTP’d file in EDIFACT or ANSI format that updates location information of Containers and Container Items handled within the INTTRA Application Network (e.g. Shipping Instructions/Booking)
+
+      - title: RCOM
+        desc: Retek Customer
+        tagline: Retek’s Customer Order Manager built using JBoss 2.0 and EJB 2.0
+
 
 publications:
     title: Publications
@@ -295,9 +411,10 @@ publications:
       
 
     papers:
-      - title: test
-        authors: test
-        conference: test
+      - title: Austender OCDS
+        authors: Rodel Talampas (Gruden / The Citadel Group)
+        description: SwaggerHub
+        link: https://app.swaggerhub.com/apis/austender/ocds-api/1.1#/
 
 skills:
     title: Skills &amp; Proficiency

@@ -15,10 +15,26 @@
     <h3 class="tagline">{{ sidebar.tagline }}</h3>
     {% endif %}
 
+    {% if sidebar.awscert %}
+    <a target="_blank" href="{{ sidebar.awslink }}"><img src="{{ site.baseurl }}/assets/images/{{ sidebar.awscert }}" alt="certification" width="50%" height="50%"/></a>
+    {% endif %}
+
   </div><!--//profile-container-->
 
   {% if sidebar.education %}
     {% include education.html %}
+  {% endif %}
+
+  {% if sidebar.skills %}
+    {% include skills.html %}
+  {% endif %}
+  
+  {% if sidebar.opensource %}
+    {% include opensource.html %}
+  {% endif %}
+
+  {% if sidebar.projects %}
+    {% include projects.html %}
   {% endif %}
 
   {% include language.html %}

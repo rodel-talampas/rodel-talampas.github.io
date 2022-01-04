@@ -1,0 +1,23 @@
+{% assign opensource = site.data.data.projects.opensource %}
+{% if opensource %}
+  {% if site.data.data.sidebar.opensource %}
+  <div class="education-container container-block">
+
+    <h2 class="container-block-title">
+      OpenSource
+    </h2>
+    
+    {% for project in opensource %}
+      <div class="item">
+        <a aria-label="{{ project.title }}" target="_blank" href="{{ project.link }}" class="alist">
+          <h4 class="degree">{{ project.title }}</h4>
+        </a>
+        <h5 class="meta">- {{ project.tagline }}</h5>
+      </div><!--//item-->
+    {% endfor %}
+
+  </div><!--//education-container-->
+  
+  </section><!--//section-->
+  {% endif %}
+{% endif %}
