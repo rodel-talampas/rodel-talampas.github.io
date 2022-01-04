@@ -8,6 +8,7 @@ sidebar:
     opensource: True
     projects: True
     skills: True
+    printer: True
 
     # Profile information
     name: Rodel Talampas
@@ -15,6 +16,7 @@ sidebar:
     avatar: rodel.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
     awscert: AWS_Certified_Logo_SAA_294x230_Color.png
     awslink: https://www.credly.com/badges/78c65211-4ab4-46d0-a758-d6ac69af54f3/public_url
+    resume: https://drive.google.com/file/d/1TYxNjYdWOxhF4G54JIXnaiN8UbD3Migw/view?usp=sharing 
     # Sidebar links
     email: rodel.talampas@gmail.com
     phone: 
@@ -113,6 +115,7 @@ experiences:
       time: Feb 2020 - Current
       description: oOh!media is changing the face of the Out of Home industry in Australia. Its combination of reach across 35,000 locations Australia-wide, its diverse product range, and its market-leading data insight, makes brands powerfully unmissable.
       details: 
+      - Started as a Senior DevOps Engineer and transitioned/promoted to Solutions Architect to Lead Solutions Architect, managing 2 DevOps Engineer
       - Study and document the Existing Cloud infrastructure of oOh!media 
       - Support Development and Application Teams on Product and Application Infrastructure using Terraform as IaC and Packer as an AMI Tool
       - Create/Upgrade Container and Kubernetes Pods that is primarily used by our CICD Pipeline (Concourse) and Metrics Dashboard (Grafana/Prometheus/InfluxDB)
@@ -140,6 +143,7 @@ experiences:
       time: Jun 2018 - May 2019
       description: Part of Citadel Group of Companies, Gruden focuses on helping clients implement measurable, digital investment to enhance client’s customer experience and growth using different cloud technologies.
       details: 
+      - Applied as a Senior Cloud Engineer and transitioned to the Lead Cloud Engineer/Cloud Arcitect, managing 2 Cloud Engineers
       - Study and document the Cloud infrastructure of different Government clients throughout NSW, ACT and VIC
       - Lead a group of Cloud Engineer that monitors and enhances each Cloud Infrastructure of our clients, this includes but not limited to Daily Monitoring, development and modification of server bootstrap scripts
       - Provide Application and Cloud Architecture Solutions to managed/developed applications of clients in Coldfusion, Java and C#.net
@@ -153,6 +157,7 @@ experiences:
       time: May 2015 - Jun 2018
       description: Helix Leisure offers out-of-home entertainment with technology-driven products and services that result in a fantastic on-site consumer experience. Umbrella companies in Dallas (LockerNetwork), Perth (Embed Card) and Sydney (BookingBoss) provide software solutions to clients’ businesses, enhancing their customer experience to the fullest.
       details: 
+      - Started as a Senior Software Developer and was promoted as a Solutions Architect
       - Re-engineered a prototype Locker Network System that is completely Java based (JPA and Spring for configuration, Java IO for accessing PCBs and Input Devices such as Credit Card Readers, Java Threads for multi-processing and Java FX as the Front End UI) and running on a small linux footprint (Lubuntu)
       - Created an Open Source Project for JavaFX Page Transitioning creating a personal Annotation for use in the Transition and JPA for Page Configuration (https://github.com/ledorsapmalat/FXScreenNavigationFramework)
       - Created an Open Source Project to customized and create an automated Ubuntu Server Installation (see opensource projects)
@@ -197,24 +202,14 @@ experiences:
       time: Sep 2006 - Apr 2012
       description: INTTRA is the world’s largest, multi-carrier network for the ocean shipping industry. 
       details:
-      - Lead designer for the design and implementation of trade and logistics applications ranging from web-applications through data integration applications.
-      - Work with Project Team on providing estimates and timelines during Planning Stage and Budget proposal.
-      - Provide Technical Documentations for used of other developers.
-      - Liaise with the Business Analyst in finalizing business requirements and functional design.
-      - Manage developers through constant tutoring and monitoring of tasks at hand.
-      - Liaise with Lead Engineering Architect and DB Architect on my design proposal to reduce technical debt.
-      - Liaise with QA Group on finalizing Functional Test Requirements and Stress Test Criteria.
-      - Provide hand-over training and documentations to Product Support Team
-      - Lead Developer for the implementation of Trade and Logistics web-applications and Reporting Module.
-      - Lead Developer to design db table structure used by web-applications using normalization techniques.
-      - Provide Technical Documentations for used of other developers.
-      - Liase with Project Management to provide estimates during Project Planning.
-      - Manage developers through constant tutoring and monitoring of tasks at hand.
-      - Liaise with the Business Analysts in finalizing business requirements and functional design.
-      - Liaise with DB Architect on my design proposal to reduce technical debt.
-      - Liaise with Infrastructure Team on new requirements on Hardware changes.
-      - Liaise with QA on test requirements
-      - Enforce best practices and code quality to reduce technical debt
+      - Primary Developer and Owner of INTTRA’s Report System which enables customers to view their bookings and shippings through a downloadable CSV/Excel Format. The Report Generation is developed using C#.Net and the Report Portal is developed using JSP and XHTML as the frontend while Java Persistence Layer is the backend running in Tomcat Server.
+      - Provide support and enhancements on the ETL system running as a Quartz Scheduled Service and leveraging Oracle’s Stored Procedure and Function Capability as well as Materialized Views.
+      - Lead Designer and Developer of INTTRA’s Billing System using Java Persistence in the backend connecting to Oracle DB and JSP and Struts in the Front End.
+      - Team Lead for a group of 5- 6 Developers developing Backend and Web Applications
+      - Created a POC Web Application using the initial version of the GWT (Google Web Toolkit)
+      - Leverage the use of JSP, Struts, and AJAX to develop a Shipping Logistics and Container Tracking Web Application that is connected to the Oracle Database
+      - Engineered the enhancement of the Container Tracking ETL System leveraging Oracle Stored Procedure and Functions that boosted processing of Container Events from 5,000 records per hour to 20,000-40,000 events per hour
+      - Enhance processing of ANSI and EDIFACT standard Booking, Shipping and Container Data FTP Processing
 
     - role: Software Developer Consultant
       company: Crimsonlogic

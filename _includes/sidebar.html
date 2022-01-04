@@ -19,6 +19,10 @@
     <a target="_blank" href="{{ sidebar.awslink }}"><img src="{{ site.baseurl }}/assets/images/{{ sidebar.awscert }}" alt="certification" width="50%" height="50%"/></a>
     {% endif %}
 
+    {% if sidebar.printer %}
+    <br><a aria-label="Printer Friendly" target="_blank" href="{{ sidebar.resume }} "><i class="fa-solid fa-download" aria-hidden="true"></i></a>
+    {% endif %}
+
   </div><!--//profile-container-->
 
   {% if sidebar.education %}
