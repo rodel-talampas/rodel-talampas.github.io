@@ -3,7 +3,7 @@
 <rss version="2.0">
   <channel>
     <title>-</title>
-    <link>https://rodel.talampas.net/resume/</link>
+    <link>https://rodel.talampas.net/about/</link>
     <description />
     <item>
       <guid>https://rodel.talampas.net</guid>
@@ -20,6 +20,12 @@
     <item>
       <guid>https://rodel.talampas.net/resume/</guid>
       <link>https://rodel.talampas.net/resume/</link>
+      <title>Rodel Manalo Talampas</title>
+      <description>A beautiful Jekyll theme for creating resume</description>
+    </item>
+    <item>
+      <guid>https://rodel.talampas.net/about/</guid>
+      <link>https://rodel.talampas.net/about/</link>
       <title>Rodel Manalo Talampas</title>
       <description>A beautiful Jekyll theme for creating resume</description>
     </item>
