@@ -68,6 +68,15 @@ sidebar:
       - item: Databases (MariaDB, MySQL, PostGres, Oracle, Redshift, Aurora, GreenPlum, Derby)
         link:
 
+profile:
+    title: About this Site
+    summary: |
+      Hi! I am Rodel. This is my personal website. This is a collection of my Professional Profile - from resume and hobbies to articles created.
+
+      <b>It is currently being develop. Please bear with me!</b>
+
+      This website has been created using Jekyll and a combination of different Jekyll themes, primarily patterned from [bbrattoli.github.io](https://github.com/bbrattoli/bbrattoli.github.io).
+      Other themes merged into this site are [murraco](https://github.com/murraco/jekyll-theme-minimal-resume) and [mattcouchman](https://github.com/mattcouchman/jekyll-resume).
 
 career-profile:
     title: Career Profile
