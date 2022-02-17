@@ -1,29 +1,21 @@
-{% assign publications = site.data.data.publications %}
-{% if publications %}
-<section class="section publications-section">
-
+{% assign articles = site.data.articles.list %}
+{% if articles %}
+<section class="section article-section">
+ 
   <h2 class="section-title">
     <span class="fa-stack fa-xs">
       <i class="fas fa-circle fa-stack-2x"></i>
       <i class="fas fa-file-alt fa-stack-1x fa-inverse"></i>
     </span>
-    {{ publications.title }}
+    {{ articles.title }}
   </h2>
 
-  {% if publications.intro %}
-  <div class="intro">
-    {{ publications.intro | markdownify }}
-  </div><!--//intro-->
-  {% endif %}
-
-  {% for publication in publications.papers %}
+  {% for article in articles.papers %}
   <div class="item">
-    <div class="publication-title">{{ publication.title }}</div>
-    <div class="publication-authors">{{ publication.authors }}</div>
-    
-    <a aria-label="{{ publication.title }}" target="_blank" href="{{ publication.link }}" class="alist">
-      <div class="publication-conference">{{ publication.description }}</div>
+    <a aria-label="{{ article.title }}" href="{{ article.link }}" class="alist">
+      <div class="article-title"><b>{{ article.title }}</b></div>
     </a>
+    <div class="article-conference">{{ article.description }}</div>
   </div><!--//item-->
   {% endfor %}
 

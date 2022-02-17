@@ -1,0 +1,46 @@
+---
+title: Developer Setup for Mac
+---
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+{% include head.html %}
+<head>
+  <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | prepend: site.baseurl }}">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="page-wrapper">
+      <h2>Postgres Database in a Docker Container</h2>
+      <p>You want to install a Database in your machine for development purposes, correct? I would advise not to 
+but instead install Docker and create a Dockerize Database, Postgres for example. </p>
+      <pre>
+<code>
+  docker run --name mydb -e POSTGRES_PASSWORD='mypassword' -d -p 5432:5432 postgres:11    
+  # or simply postgres to pull latest, if you use a different version -- omit :11
+  brew install libpq # install postgres client libraries if havent done so
+  
+  # PGPASWORD env variable is used by psql command to authenticate a user with the -U option
+  export PGPASSWORD=mypassword
+    
+  # Create a database based on your project
+  createdb -h localhost -U postgres mydatabase
+    
+  # Create users based on your project
+  psql -h localhost -U postgres -d mydatabase -c "create user admin superuser;"
+  psql -h localhost -U postgres -d mydatabase -c "create user write;"
+  psql -h localhost -U postgres -d mydatabase -c "create user readonly;"
+  
+  # Grant users
+  psql -h localhost -U postgres -d mydatabase -c "GRANT ALL PRIVILEGES ON DATABASE mydatabase TO write;"
+  psql -h localhost -U postgres -d mydatabase -c "GRANT SELECT ON ALL TABLES IN SCHEMA myschema TO readonly;"
+</code></pre>
+    </div>
+  </div>
+
+{% include scripts.html %}
+</body>
+
+</html>
+

@@ -1,0 +1,103 @@
+---
+title: Developer Setup for Mac
+---
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+{% include head.html %}
+<head>
+  <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | prepend: site.baseurl }}">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="page-wrapper">
+      <h2>Developer Setup for Mac</h2>
+      <p>You have a new MacBook Pro! You need to setup your mac to be Developer Ready and don't know what to do.
+ You are in the right place. I have compiled a list of installation scripts for a typical Developer that uses any Mac System. </p>
+      <pre>
+        <code>
+  xcode-select --install
+
+  # Install Homebrew - preferred apps installation manager
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  brew upgrade
+
+  # Install Python 3
+  brew install python3
+
+  # Install AWS Client using Homebrew
+  brew install awscli
+  # if there is already an install client, ovewrite its softlink
+  brew link awscli --overwrite 
+  
+  # update pip 
+  curl https://bootstrap.pypa.io/get-pip.py | python3
+  
+  # install jq
+  brew install jq
+  
+  # install aws client for localstack
+  pip install awscli-local
+  
+  # install virtualenv for python, if you dont use python no need to install this
+  pip install virtualenv
+  
+  # this is my preferred editor, if you dont like it dont install it
+  brew install atom
+  
+  # some passwords used for OPs are in keepass and macpass is the keepass version for mac
+  brew install macpass
+  
+  # we do use kubernetes, this is required to connect to it
+  brew install kubectx
+  
+  # install gpg 
+  brew install gpg
+  
+  # preferred mac terminal
+  brew install iterm2
+  
+  # all about NODEJS
+  brew install node
+  brew install nvm
+  brew install yarn
+  
+  # this is not required for the new office
+  yarn config set strict-ssl false
+  
+  # for AWS lambda deployment, we prefer Serverless Framework
+  curl -o- -L https://slss.io/install | bash
+  
+  #brew install java
+  #jdk download use oracle download
+  
+  # install docker using docker installer for mac (recommended), download it
+  curl https://desktop.docker.com/mac/stable/arm64/Docker.dmg?utm_source=docker&utm_campaign=docs-driven-download-mac-arm64
+  # locate after download and double-click / install
+  
+  # password tools
+  brew install blackbox
+  brew install credstash
+  
+  # postgres tool
+  brew install libpq 
+  
+  # CHANGE TO zsh, if you want too.
+  chsh -s /bin/zsh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  
+  #install git
+  brew install git
+  
+  # install git flow
+  brew install git-flow
+</code></pre>
+    </div>
+  </div>
+
+{% include scripts.html %}
+</body>
+
+</html>
+

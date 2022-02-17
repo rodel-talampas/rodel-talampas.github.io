@@ -1,0 +1,17 @@
+#
+# Be aware that even a small syntax error here can lead to failures in output.
+#
+
+list:
+    title: Articles
+    intro: |
+      
+
+    papers:
+      - title: Developer Setup for Mac
+        description: Compilation of Installation Scripts that install Developer Tools in a Mac System
+        link: developer_setup_mac.html 
+
+      - title: Postgres Container
+        description: Use Postgres Database deployed in a Docker Container
+        link: docker_postgres.html 

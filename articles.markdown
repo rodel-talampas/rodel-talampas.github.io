@@ -4,6 +4,7 @@ title: My Articles
 permalink: /articles/
 ---
 
+{% include articles.html %}
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
