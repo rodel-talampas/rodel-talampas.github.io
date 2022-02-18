@@ -3,8 +3,27 @@
 <script type="text/javascript" src="{{site.baseurl}}/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- custom js -->
+<!-- <script type="text/javascript" src="{{site.baseurl}}/assets/js/sweet-scroll.min.js"></script>
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer data-deferred="1"></script> -->
 
 {% if site.analytics %}
   {% include analytics.html %}
 {% endif %}
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>

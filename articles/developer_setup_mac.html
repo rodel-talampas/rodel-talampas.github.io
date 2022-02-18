@@ -14,85 +14,242 @@ title: Developer Setup for Mac
     <div class="page-wrapper">
       <h2>Developer Setup for Mac</h2>
       <p>You have a new MacBook Pro! You need to setup your mac to be Developer Ready and don't know what to do.
- You are in the right place. I have compiled a list of installation scripts for a typical Developer that uses any Mac System. </p>
+ You are in the right place. I have compiled a list of installation scripts for a typical Developer to kick start a Developer Machine. </p>
+      <h3>macOS Updates</h3>  
+      <p>
+      Before installing any applications you require, it is a good idea to update the Operating System. As much as possible, I try to have 
+      the latest version of the MacOS with patches.
+      </p>
+      <h3>XCode</h3>
+      <p>First step, you need to install <b>XCode</b> which is Apple's integrated development environment for MacOS.
+      You can download it in the Apple Store free of charge. There is a command line instruction to install xcode.
+      Open a new <i>terminal</i> and type the code below.</p>
       <pre>
         <code>
-  xcode-select --install
+xcode-select --install</code>
+      </pre>
 
-  # Install Homebrew - preferred apps installation manager
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  brew upgrade
+      <h3>Homebrew</h3>
+      <p>
+      I pretty much use <b>Homebrew</b> or <i>brew</i> to install anything on my MacBook and Linux Machines.
+      Run the following commands to download and install <i>brew</i> and upgrade it, though there should not be anything to upgrade. 
+      No harm doing though.
+      </p>
+      <pre>
+        <code>
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew upgrade</code>
+      </pre>
 
-  # Install Python 3
-  brew install python3
+      <h3>Python3</h3>
+      <p>
+      Next to Java, Python is probably my next go to programming language. I used python a lot to build client tools and serverless applications.
+      Jq is a tool to parse JSON Strings and I predominantly use this with python and aws. Python virtualization is a must if you are going to develop using python.
+      </p>
+      <pre>
+        <code>
+brew install python3
+curl https://bootstrap.pypa.io/get-pip.py | python3
+pip install virtualenv
+brew install jq</code>
+      </pre>
 
-  # Install AWS Client using Homebrew
-  brew install awscli
-  # if there is already an install client, ovewrite its softlink
-  brew link awscli --overwrite 
+      <h3>AWS</h3>
+      <p>
+      I work mostly with AWS Cloud hence I require AWS Client that uses Python. If you are not in AWS, you may skip this part. This command
+      will help you install and upgrade your aws client (if already instealled).
+      </p>
+      <pre>
+        <code>
+brew install awscli
+brew link awscli --overwrite 
+pip install awscli-local</code>
+      </pre>
+
+      <h3>Docker Desktop</h3>
+      <p>
+        Docker or container is a tool that helps me a lot. I don't really need to install directly an application in my Machine and just create a 
+        container out of it. I can have multiple versions of the app I require using containers. Run the command below to install <i>docker</i>.
+      </p>
+      <pre>
+        <code>
+brew cask install docker</code>
+      </pre>
+      <p>
+      Many times I tried to install docker client using <i>brew</i> and it failed. To download manually, run the command below and locate the downloaded file and click to install.
+      </p>
+      <pre>
+        <code>
+curl https://desktop.docker.com/mac/stable/arm64/Docker.dmg?utm_source=docker&utm_campaign=docs-driven-download-mac-arm64</code>
+      </pre>
+
+      <h3>Localstack</h3>
+      <p>
+      Since AWS is a paid service, creating infrastructure usually cost $$$ if you are unable to use the free-tier. To test out my infrastructure-as-code 
+      scripts, I spin up a Mock AWS Service called <i>localstack</i>.
+      </p>
+      <pre>
+        <code>
+pip install localstack </code>
+      </pre>
+
+      <h3>Terminal</h3>
+      <p>
+      MacOS' terminal is nice, no complains about it. As a developer, sometimes I would like to work on a Terminal but within the 
+      same window. Hence, I reqire some Split functionality and <i>iTerm2</i>> has that capability. ZSH is the prefered console of MacOS terminal.
+      </p>
+      <pre>
+        <code>
+brew install iterm2
+chsh -s /bin/zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</code>
+      </pre>
+
+      <h3>NodeJS</h3>
+      <p>
+      As much as I don't want to tackle NodeJS, this programming language is pretty much use anywhere from backend processing to UI 
+      development using frameworks such as <i>react</i> or <i>angular</i> or <i>vue</i>.
+      </p>
+      <pre>
+        <code>
+brew install node
+brew install nvm
+brew install yarn</code>
+      </pre> 
+
+      <h3>Serverless Framework</h3>
+      <p>
+      Between AWS Severless Application Model (<b>SAM</b>) and Serverless Framework (<b>SLS</b>), I prefer the latter. Both framework patterns
+      their syntax from AWS Cloudformation, but I firmly believe Serverless Framework is more mature.
+      </p>
+      <pre>
+        <code>
+curl -o- -L https://slss.io/install | bash</code>
+      </pre>  
+
+      <h3>Git and Git Flow</h3>
+      <p>
+      In one way or another, you might be using a Source Code Versioning System like <i>github</i> or <i>gitlab</i>. A <b>git</b> client is required.
+      I have added a plugin called <i>git flow</i> for the purpose of following a release framework.
+      </p>
+      <pre>
+        <code>
+brew install git
+brew install git-flow</code>
+      </pre>  
+
+      <h3>Database Connectivity Tool</h3>
+      <p>
+      We use databases to persist data. I've used a lot of databases in my career, from MS SQL Server to Oracle to Postgres or MySQL. I don't have a clear favorite but 
+      for this tutorial, I will go with the easiest <i>postgres</i>. Take note, this is only a connection tool, you may ask how do you install your database? 
+      As I've mentioned, I would rather containerize my applications like databases.
+      </p>
+      <pre>
+        <code>
+brew install libpq </code>
+      </pre>  
+
+      <h3>Miscellaneous Tools</h3>
+      <p>
+      The rest of the apps in this <i>code block</i> are optional. Some are required due to the fact that I am using it like <i>gpg</i> for encryption and <i>java</i> being my 
+      favorite programming language. It is to your discretion if you will install them or not.
+      </p>
+      <pre>
+        <code>
+brew install atom
+brew install kubectx
+brew install gpg
+brew install blackbox
+brew install java
+brew cask install eclipse-java
+brew cask install postman
+brew install macpass
+brew install credstash</code>
+      </pre>  
+
+      <p></p>
+      <h3>Full Script</h3>
+      <p>I've compiled all of the above commands into one script below.</p>
+      <button type="button" class="collapsible">Click Here --> </button>
+        <pre class="content">
+          <code>
+xcode-select --install
   
-  # update pip 
-  curl https://bootstrap.pypa.io/get-pip.py | python3
+# Install Homebrew - preferred apps installation manager
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew upgrade
   
-  # install jq
-  brew install jq
-  
-  # install aws client for localstack
-  pip install awscli-local
-  
-  # install virtualenv for python, if you dont use python no need to install this
-  pip install virtualenv
-  
-  # this is my preferred editor, if you dont like it dont install it
-  brew install atom
-  
-  # some passwords used for OPs are in keepass and macpass is the keepass version for mac
-  brew install macpass
-  
-  # we do use kubernetes, this is required to connect to it
-  brew install kubectx
-  
-  # install gpg 
-  brew install gpg
-  
-  # preferred mac terminal
-  brew install iterm2
-  
-  # all about NODEJS
-  brew install node
-  brew install nvm
-  brew install yarn
-  
-  # this is not required for the new office
-  yarn config set strict-ssl false
-  
-  # for AWS lambda deployment, we prefer Serverless Framework
-  curl -o- -L https://slss.io/install | bash
-  
-  #brew install java
-  #jdk download use oracle download
-  
-  # install docker using docker installer for mac (recommended), download it
-  curl https://desktop.docker.com/mac/stable/arm64/Docker.dmg?utm_source=docker&utm_campaign=docs-driven-download-mac-arm64
-  # locate after download and double-click / install
-  
-  # password tools
-  brew install blackbox
-  brew install credstash
-  
-  # postgres tool
-  brew install libpq 
-  
-  # CHANGE TO zsh, if you want too.
-  chsh -s /bin/zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  
-  #install git
-  brew install git
-  
-  # install git flow
-  brew install git-flow
-</code></pre>
+# Install Python 3
+brew install python3
+# update pip 
+curl https://bootstrap.pypa.io/get-pip.py | python3
+# install virtualenv for python, if you dont use python no need to install this
+pip install virtualenv
+# install jq
+brew install jq
+
+# Install AWS Client using Homebrew
+brew install awscli
+# if there is already an install client, ovewrite its softlink
+brew link awscli --overwrite 
+# install aws client for localstack
+pip install awscli-local
+
+# install docker using docker installer
+brew cask install docker
+
+# install localstack
+pip install localstack
+
+# preferred mac terminal
+brew install iterm2
+
+# CHANGE TO zsh, if you want too.
+chsh -s /bin/zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# all about NODEJS
+brew install node
+brew install nvm
+brew install yarn
+# if your office has certificate restrictions, you may want to remove ssl restriction
+yarn config set strict-ssl false
+
+# for AWS lambda deployment, we prefer Serverless Framework
+curl -o- -L https://slss.io/install | bash
+
+#install git
+brew install git
+
+# install git flow
+brew install git-flow
+
+# postgres tool
+brew install libpq 
+
+# this is my preferred editor, if you dont like it dont install it
+brew install atom
+
+# some passwords used for OPs are in keepass and macpass is the keepass version for mac
+brew install macpass
+
+# we do use kubernetes, this is required to connect to it
+brew install kubectx
+
+# install gpg 
+brew install gpg
+
+# install Java
+brew install java
+brew cask install eclipse-java
+brew cask install postman
+
+# password tools
+brew install blackbox
+brew install credstash
+
+  </code></pre>
+      
     </div>
   </div>
 
