@@ -1,21 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://rodel.talampas.net</loc>
-    <changefreq>always</changefreq>
+    <loc>https://rodel.talampas.net/</loc>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://rodel.talampas.net/articles/</loc>
-    <changefreq>always</changefreq>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://rodel.talampas.net/articles/developer_setup_mac.html</loc>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://rodel.talampas.net/resume/</loc>
-    <changefreq>always</changefreq>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://rodel.talampas.net/articles/docker_postgres.html</loc>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://rodel.talampas.net/about/</loc>
-    <changefreq>always</changefreq>
+    <changefreq>daily</changefreq>
   </url>
 </urlset>
-<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
