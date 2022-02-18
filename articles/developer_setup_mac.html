@@ -170,9 +170,9 @@ brew install credstash</code>
       <p></p>
       <h3>Full Script</h3>
       <p>I've compiled all of the above commands into one script below.</p>
-      <button type="button" class="collapsible">Click Here --> </button>
+      <button type="button" class="collapsible" onclick="copyToClipboard('fullScript')">Click Here to Collapse and copy to Clipboard --> </button>
         <pre class="content">
-          <code>
+          <code id="fullScript">
 xcode-select --install
   
 # Install Homebrew - preferred apps installation manager
