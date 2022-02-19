@@ -15,10 +15,91 @@ title: Developer Setup for Mac
       <h2>Postgres Database in a Docker Container</h2>
       <p>You want to install a Database in your machine for development purposes, correct? I would advise not to 
 but instead install Docker and create a Dockerize Database, Postgres for example. </p>
-      <pre>
-<code>
-  docker run --name mydb -e POSTGRES_PASSWORD='mypassword' -d -p 5432:5432 postgres:11    
-  # or simply postgres to pull latest, if you use a different version -- omit :11
+
+<h3>Postgres</h3>
+<p>
+PostgreSQL is a powerful, open source object-relational database. It offers more complex data types and allows objects to inherit properties, but it also makes working with PostgreSQL 
+more complex. PostgreSQL has a single, ACID-compliant storage engine.
+</p>
+<pre>
+  <code>
+docker run --name mydb -e POSTGRES_PASSWORD='mypassword' -d -p 5432:5432 postgres
+</code>
+</pre>
+
+<ul>
+  <li>--name "mydb"
+  <blockquote>This is the name of your container.</blockquote></li>
+  <li>-e POSTGRES_PASSWORD='mypassword'
+    <blockquote>This is the password of the admin user 'postgres'.</blockquote></li>
+  <li>-p &lt;system port&gt;:&lt;target port&gt;
+    <blockquote>Map the container's port 5432 (left of :) to the systems port 5432 (right of :)</blockquote></li>
+  <li>-d
+    <blockquote>Start the containerized app in the background</blockquote></li>    
+  <li>postgres[:&lt;version&gt;]
+    <blockquote>The container to download and start. Add :&lt;version&gt; to specify the version of the container.</blockquote></li>
+</ul>
+
+<h4>Create the Database</h4>
+<p>Creating the database is as simple as running a <i>createdb</i> command. This command is part of the postgres client library <i>libpq</i>.
+Make sure that an environment variable 'PGPASSWORD' has been set to have the value of the password
+defined in the docker container command above.</p>
+<pre>
+  <code>
+export PGPASSWORD=mypassword    
+createdb -h localhost -U postgres mydatabase
+</code>
+</pre>
+<ul>
+  <li>-h &lt;hostname&gt;
+  <blockquote>This specifies the hostname of the database server. Since this is a docker container, it is default to be the localhost.</blockquote></li>
+  <li>-U postgres
+    <blockquote>The default postgres admin user.</blockquote></li>
+  <li>&lt;database name&gt;
+    <blockquote>The name of the database to be created, here it's 'mydatabase'</blockquote></li>
+</ul>
+
+<h4>Create Database Users</h4>
+<p>You don't use the default user to connect to the database regularly, specially in a Production Environment. 
+  You need to create users. The <i>psql</i> command is part of the postgres client library 'libpq'.
+</p>
+<pre>
+  <code>
+psql -h localhost -U postgres -d mydatabase -c "create user db_admin superuser;"
+psql -h localhost -U postgres -d mydatabase -c "create user write;"
+psql -h localhost -U postgres -d mydatabase -c "create user readonly;"
+</code>
+</pre>
+<ul>
+  <li>-h &lt;hostname&gt;
+  <blockquote>This specifies the hostname of the database server. Since this is a docker container, it is default to be the localhost.</blockquote></li>
+  <li>-U postgres
+    <blockquote>The default postgres admin user.</blockquote></li>
+  <li>-d &lt;databae name&gt;
+    <blockquote>The database you want to connect to.</blockquote></li>
+  <li>-c &lt;sql statements&gt;
+    <blockquote>The sql statement you want to run. In this case the <i>create user</i> statement.</blockquote></li>
+</ul>
+
+<h4>Assign Permission</h4>
+<p>Creating user is not enough. You will not be able to use the user you created without giving them permission to access
+  the database.
+</p>
+<pre>
+  <code>
+psql -h localhost -U postgres -d mydatabase -c "GRANT ALL PRIVILEGES ON DATABASE mydatabase TO write;"
+psql -h localhost -U postgres -d mydatabase -c "GRANT SELECT ON ALL TABLES IN SCHEMA myschema TO readonly;"
+</code>
+</pre>
+
+<p></p>
+      <h3>Full Script</h3>
+      <p>I've compiled all of the above commands into one script below.</p>
+<button type="button" class="collapsible" onclick="copyToClipboard('fullScript')">Click Here to Collapse and copy to Clipboard --> </button>
+<pre class="content">
+  <code id="fullScript">
+  docker run --name mydb -e POSTGRES_PASSWORD='mypassword' -d -p 5432:5432 postgres    
+  # add in `:<version>` to install a specific version of postgres (e.g. :11)
   brew install libpq # install postgres client libraries if havent done so
   
   # PGPASWORD env variable is used by psql command to authenticate a user with the -U option
@@ -35,7 +116,8 @@ but instead install Docker and create a Dockerize Database, Postgres for example
   # Grant users
   psql -h localhost -U postgres -d mydatabase -c "GRANT ALL PRIVILEGES ON DATABASE mydatabase TO write;"
   psql -h localhost -U postgres -d mydatabase -c "GRANT SELECT ON ALL TABLES IN SCHEMA myschema TO readonly;"
-</code></pre>
+</code>
+</pre>
     </div>
   </div>
 
