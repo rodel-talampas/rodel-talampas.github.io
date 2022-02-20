@@ -24,7 +24,7 @@
     <div class="article-conference">{{ video.description }}</div>
     <div class="article-conference">
         {% if video.id %}
-          {% youtube video.id %}
+        <iframe width="560" height="420" src="http://www.youtube.com/embed/{{ video.id }}?color=white&theme=light"></iframe>  
         {% endif %}
     </div>
   </div><!--//item-->
