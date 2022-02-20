@@ -1,0 +1,34 @@
+{% assign all = site.data.youtube.list %}
+{% if all %}
+<section class="section article-section">
+ 
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-stack-1x fa-video fa-inverse"></i>
+    </span>
+    {{ all.title }}
+  </h2>
+  <div>
+    <a aria-label="TalampasKidsTV Channel" href="{{ all.site }}">
+      <video width="100%" height="240"  autoplay muted loop>
+      <source src="../assets/videos/TalampasKidsTVChannelArt.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </a>
+  </div>
+  <center>
+  {% for video in all.videos %}
+  <div class="item">
+    <div class="article-title"><b>{{ video.title }}</b></div>
+    <div class="article-conference">{{ video.description }}</div>
+    <div class="article-conference">
+        {% if video.id %}
+          {% youtube video.id %}
+        {% endif %}
+    </div>
+  </div><!--//item-->
+  {% endfor %}
+  </center>
+</section><!--//section-->
+{% endif %}

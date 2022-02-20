@@ -1,0 +1,55 @@
+#
+# Be aware that even a small syntax error here can lead to failures in output.
+#
+
+list:
+    title: Youtube Videos
+    site: https://www.youtube.com/channel/UChd3fbwaxm5HV10KcrRqHbg
+    videos:
+    -   title: Million To One - Cover
+        description: 
+        id: LxLq7ynQQNk
+
+    -   title: Let It Go - Cover with Piano
+        description: 
+        id: htBqv2qkoJc
+
+    -   title: AGC 2021 Year End Concert - Finale
+        description: 
+        id: qVl4xjiXg6M
+
+    -   title: AGC 2021 Year End Concert - Bikini Bottom Party
+        description:
+        id: RrfkeYFsPYA
+
+    -   title: Me - Cover
+        description: 
+        id: -SU1OrDSVZw
+
+    -   title: Try Everything - Cover
+        description: 
+        id: qDyoM74xuxA
+
+    -   title: Fignt Song - Cover with Piano
+        description: 
+        id: Hot_V24fjVc
+
+    -   title: Better When I'm Dancing - Cover
+        description:
+        id: cRuKyyNu0I4        
+
+    -   title: Just Give Me a Reason - Cover
+        description: 
+        id: hHssg8NWkGQ
+
+    -   title: Speechless - Cover
+        description: 
+        id: M-2JiRf1jjU
+
+    -   title: Titanium - Cover
+        description: 
+        id: TWVm_iYwuZ8
+
+    -   title: AGC 2020 Mid Year - @Home Concert
+        description:
+        id: QxYESu0u1tI  
