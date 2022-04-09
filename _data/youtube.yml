@@ -6,6 +6,10 @@ list:
     title: Youtube Videos
     site: https://www.youtube.com/channel/UChd3fbwaxm5HV10KcrRqHbg
     videos:
+    -   title: What Else Can I Do - Cover
+        description: 
+        id: Byr23esFxko
+
     -   title: Million To One - Cover
         description: 
         id: LxLq7ynQQNk
