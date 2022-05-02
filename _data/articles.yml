@@ -15,3 +15,11 @@ list:
       - title: Postgres Container
         description: Use Postgres Database deployed in a Docker Container
         link: docker_postgres.html 
+
+      - title: Dynatrace Lambda Ingestion
+        description: Use Dynatrace to Monitor AWS Lambda
+        link: dynatrace_lambda_ingestion.html 
+
+      - title: Dynatrace Custom Events
+        description: Sending Event Information to Dynatrace
+        link: dynatrace_event_api.html 
