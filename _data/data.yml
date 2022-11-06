@@ -128,8 +128,8 @@ experiences:
       - Started as a Senior DevOps Engineer and transitioned/promoted to Solutions Architect to Lead Solutions Architect, managing 2 DevOps Engineer and a Senior Application Developer
       - Study and document the Existing Cloud infrastructure of oOh!media 
       - Support Development and Application Teams on Product and Application Infrastructure using Terraform as IaC and Packer as an AMI Tool
-      - Create/Upgrade Container and Kubernetes Pods that is primarily used by our CICD Pipeline (Concourse) and Metrics Dashboard (Grafana/Prometheus/InfluxDB)
-      - Create/Upgrade Concourse Pipelines that perform Continuous Integration and Deployment of all underlying AWS Infrastructure
+      - Create/Upgrade Container and Kubernetes Pods that is primarily used by our CICD Pipeline (GitActions) and Metrics Dashboard (Dynatrace)
+      - Create/Upgrade GitActions Pipelines that perform Continuous Integration and Deployment of all underlying AWS Infrastructure
       - Design and Architected in-house projects that used integrations with different 3rd party vendors
       - Implement Security Best Practices within the oOh!Media Code Base in Github
       - Implement Dynatrace monitoring all throughout AWS Stack
