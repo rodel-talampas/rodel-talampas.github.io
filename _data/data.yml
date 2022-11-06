@@ -133,7 +133,6 @@ experiences:
       - Design and Architected in-house projects that used integrations with different 3rd party vendors
       - Implement Security Best Practices within the oOh!Media Code Base in Github
       - Implement Dynatrace monitoring all throughout AWS Stack
-      - Started moving Concourse Pipelines into Git Actions
 
     - role: Lead Cloud Architect
       company: Oovvuu
