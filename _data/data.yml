@@ -16,7 +16,7 @@ sidebar:
     avatar: rodel.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
     awscert: AWS_Certified_Logo_SAA_294x230_Color.png
     awslink: https://www.credly.com/badges/78c65211-4ab4-46d0-a758-d6ac69af54f3/public_url
-    resume: https://drive.google.com/file/d/1TYxNjYdWOxhF4G54JIXnaiN8UbD3Migw/view?usp=sharing 
+    # resume: https://drive.google.com/file/d/1TYxNjYdWOxhF4G54JIXnaiN8UbD3Migw/view?usp=sharing 
     # Sidebar links
     email: rodel.talampas@gmail.com
     phone: 
