@@ -10,11 +10,13 @@ list:
     papers:
       - title: Developer Setup for Mac
         description: Compilation of Installation Scripts that install Developer Tools in a Mac System
-        link: developer_setup_mac.html 
+        # link: developer_setup_mac.html 
+        link: https://dev.to/limacon23/developer-setup-for-mac-epc
 
       - title: Postgres Container
         description: Use Postgres Database deployed in a Docker Container
-        link: docker_postgres.html 
+        # link: docker_postgres.html 
+        link: https://dev.to/limacon23/postgres-database-in-a-docker-container-367g
 
       - title: Dynatrace Lambda Ingestion
         description: Use Dynatrace to Monitor AWS Lambda
@@ -23,3 +25,19 @@ list:
       - title: Dynatrace Custom Events
         description: Sending Event Information to Dynatrace
         link: dynatrace_event_api.html 
+
+      - title: Authorisation Design (node, azure, and mongodb)
+        description: Authorisation Design using nodejs, azure AD and mongoDb
+        link: https://dev.to/limacon23/authorisation-using-nodejs-azuread-and-mongodb-part-1-design-5488
+
+      - title: Git Flow
+        description: Deep dive into what is Git Flow
+        link: https://dev.to/limacon23/git-flow-5c89
+        
+      - title: PlantUML
+        description: UML Design tool using code
+        link: https://dev.to/limacon23/enabling-plantuml-in-visual-studio-code-6ca    
+        
+      - title: BlackBox Secrets
+        description: Encryption and Decryption Strategy within your code
+        link: https://dev.to/limacon23/blackbox-secrets-amongst-your-code-11jm         
