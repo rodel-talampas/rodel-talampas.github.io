@@ -40,4 +40,9 @@ list:
         
       - title: BlackBox Secrets
         description: Encryption and Decryption Strategy within your code
-        link: https://dev.to/limacon23/blackbox-secrets-amongst-your-code-11jm         
+        link: https://dev.to/limacon23/blackbox-secrets-amongst-your-code-11jm       
+
+      - title: Singleton Connection with Transactions in MongoDB
+        description: MongoDB Transaction
+        link: https://dev.to/limacon23/singleton-connection-with-transactions-in-mongodb-1b5c  
+        
