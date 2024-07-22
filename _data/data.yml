@@ -319,6 +319,14 @@ projects:
         tagline: This is a POC template to create an RDS Server and IAM User that can access the said database server via AWS IAM Policy
 
     assignments:
+      - title: oOh!Scheduling
+        desc: Delivery  
+        tagline: It is an internal Fullstack NodeJS Application used by the delivery team to schedule ads to BroadSign.
+
+      - title: oOh!Media Payment Integration
+        desc: Finance 
+        tagline: It is a 3rd Party integration involving Payment Data to and from oOh!Media Payment System, involving the likes of Netsuite and Westpac. It revolves using AWS Transfer and AWS Lambdas.
+
       - title: oOh!Media HR Integration
         desc: People and Culture 
         tagline: It is a 3rd Party integration involving Employee Data to and from oOh!Media HR System, involving the likes of CultureAmp, Westpac and Livehire. It revolves using AWS Transfer and AWS Lambdas.
