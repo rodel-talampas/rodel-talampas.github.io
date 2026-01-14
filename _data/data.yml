@@ -119,12 +119,13 @@ educationcomplete:
       details: |     
 
 experiences:
-    - role: Technical Lead / Solutions Architect 
+    - role: Engineering Manager / Solutions Architect 
       company: oOh!media
       location: Sydney, Australia
       time: Feb 2020 - Current
       description: oOh!media is changing the face of the Out of Home industry in Australia. Its combination of reach across 35,000 locations Australia-wide, its diverse product range, and its market-leading data insight, makes brands powerfully unmissable.
       details:
+      - Progression from Senior DevOps Engineer (2020) → Lead Solutions Architect (2021) → Technical Lead (2024) → Engineering Manager (2025)
       - Leading a team of Engineers doing maintenance and integration works within the Enterprise Domain
       - Led a group of Team Leads/Engineering Managers during the absense of the Head of Engineering, as an interim Head of Engineering
       - Started as a Senior DevOps Engineer and transitioned/promoted to Solutions Architect to Lead Solutions Architect. 
