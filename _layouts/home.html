@@ -1,10 +1,111 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 <html lang="en">
-  {% include head.html %}
-  <body>
-      {% include background.html %}
-      {% include header.html %}
-  </body>
+{% include head.html %}
+<body class="modern-site home-page">
+  <main>
+    <section class="home-hero" aria-label="Introduction">
+      <picture class="home-hero__media">
+        <source
+          media="(orientation: landscape)"
+          srcset="{{ site.baseurl }}/images/{{ site.bimage_medium }} 800w, {{ site.baseurl }}/images/{{ site.bimage_large }} 1200w"
+          sizes="100vw">
+        <source
+          media="(orientation: portrait)"
+          srcset="{{ site.baseurl }}/images/{{ site.port_bimage_medium }} 400w, {{ site.baseurl }}/images/{{ site.port_bimage_large }} 600w"
+          sizes="100vw">
+        <img src="{{ site.baseurl }}/images/{{ site.bimage_large }}" alt="Rodel Talampas">
+      </picture>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a class="site-nav__brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        <div class="site-nav__links">
+          <a href="{{ site.baseurl }}/resume/">Resume</a>
+          <a href="{{ site.baseurl }}/about/">About</a>
+          <a href="{{ site.baseurl }}/articles/">Articles</a>
+          <a href="mailto:{{ site.email }}">Contact</a>
+        </div>
+      </nav>
+
+      <div class="home-hero__content">
+        <p class="eyebrow">Engineering Leader / Solutions Architect</p>
+        <h1>Scaling cloud platforms, integrations, and teams for enterprise delivery.</h1>
+        <p class="hero-copy">
+          I design pragmatic systems, lead engineering teams, and turn complex business integrations into reliable cloud-native platforms.
+        </p>
+        <div class="hero-actions">
+          <a class="button button--primary" href="{{ site.baseurl }}/resume/">
+            <i class="fa-solid fa-address-card" aria-hidden="true"></i>
+            View resume
+          </a>
+          <a class="button button--ghost" href="mailto:{{ site.email }}">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            Get in touch
+          </a>
+        </div>
+      </div>
+
+      <div class="construction-badge" aria-label="Site under construction">
+        <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+        <span>Under construction</span>
+      </div>
+
+      <div class="home-hero__facts" aria-label="Career highlights">
+        <div>
+          <strong>25+</strong>
+          <span>years building software</span>
+        </div>
+        <div>
+          <strong>30+</strong>
+          <span>major projects delivered</span>
+        </div>
+        <div>
+          <strong>20+</strong>
+          <span>engineers mentored</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-band">
+      <div class="section-heading">
+        <p class="eyebrow">Current Focus</p>
+        <h2>Enterprise architecture with delivery discipline.</h2>
+      </div>
+      <div class="feature-grid">
+        <article>
+          <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+          <h3>Cloud platforms</h3>
+          <p>AWS and Azure architecture across serverless, event-driven, container, and data workloads.</p>
+        </article>
+        <article>
+          <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+          <h3>Systems integration</h3>
+          <p>Business-critical integrations across HR, payroll, ERP, finance, media trading, and operations.</p>
+        </article>
+        <article>
+          <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+          <h3>Engineering leadership</h3>
+          <p>Team leadership, mentoring, delivery planning, incident response, and architecture governance.</p>
+        </article>
+      </div>
+    </section>
+
+    {% assign projects = site.data.data.projects.assignments | slice: 0, 6 %}
+    <section class="home-band home-band--alt">
+      <div class="section-heading">
+        <p class="eyebrow">Selected Work</p>
+        <h2>Recent and representative projects.</h2>
+      </div>
+      <div class="project-strip">
+        {% for project in projects %}
+        <article>
+          <span>{{ project.desc }}</span>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.tagline }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
   {% include scripts.html %}
+</body>
 </html>

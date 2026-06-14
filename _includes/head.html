@@ -11,7 +11,7 @@
 </head> -->
 
 <head>
-  <title>{{ site.title }}</title>
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
   <!-- Meta -->
   <meta charset="utf-8">
@@ -20,7 +20,7 @@
   {% endif%}
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional Profile Website created using Jekyll">
+  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/png" href="{{ '/images/favicon.png' }}" >
@@ -34,6 +34,7 @@
   <!-- Theme CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ '/assets/css/secondary.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ '/assets/css/modern.css' | prepend: site.baseurl }}">
 
   <!-- <link rel="stylesheet" href="{{ '/assets/css/profile.css' | prepend: site.baseurl }}"> -->
   <!-- <link id="theme-style" rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css"> -->

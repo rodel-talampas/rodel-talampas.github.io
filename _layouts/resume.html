@@ -2,21 +2,136 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<html lang="en">
 {% include head.html %}
-<body>
-  <div class="wrapper">
-    {% include sidebar.html %}
-
-    <div class="main-wrapper">
-        {{ content }}
+<body class="modern-site resume-page">
+  {% assign data = site.data.data %}
+  <nav class="site-nav site-nav--solid" aria-label="Primary">
+    <a class="site-nav__brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <div class="site-nav__links">
+      <a href="{{ site.baseurl }}/">Home</a>
+      <a href="{{ site.baseurl }}/about/">About</a>
+      <a href="{{ site.baseurl }}/articles/">Articles</a>
+      <a href="mailto:{{ site.email }}">Contact</a>
     </div>
-  </div>
+  </nav>
+
+  <main class="resume-shell">
+    <div class="resume-main">
+      <header class="resume-hero">
+        <div>
+          <p class="eyebrow">Resume</p>
+          <h1>Engineering Leader | Scaling Technology for Global Success</h1>
+          <p class="resume-summary">{{ data.career-profile.summary }}</p>
+        </div>
+      </header>
+
+      <section class="resume-section">
+      <div class="section-heading">
+        <p class="eyebrow">Experience</p>
+        <h2>Leadership and delivery history.</h2>
+      </div>
+      <div class="timeline">
+        {% for experience in data.experiences %}
+        <article class="timeline-item">
+          <div class="timeline-item__meta">
+            <span>{{ experience.time }}</span>
+            <strong>{{ experience.location }}</strong>
+          </div>
+          <div class="timeline-item__body">
+            <h3>{{ experience.role }}</h3>
+            <p class="company">{{ experience.company }}</p>
+            {% if experience.description %}
+            <p>{{ experience.description }}</p>
+            {% endif %}
+            {% if experience.details %}
+            <ul>
+              {% for detail in experience.details %}
+              <li>{{ detail }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      </section>
+
+      <section class="resume-section resume-grid-section">
+      <div class="section-heading">
+        <p class="eyebrow">Skills</p>
+        <h2>Technical strengths.</h2>
+      </div>
+      <div class="skill-cloud">
+        {% for skill in data.sidebar.skills %}
+        <span>{{ skill.item }}</span>
+        {% endfor %}
+        {% for skill in data.skills.toolset %}
+        <span>{{ skill.name }}</span>
+        {% endfor %}
+      </div>
+      </section>
+
+      <section class="resume-section">
+      <div class="section-heading">
+        <p class="eyebrow">Projects</p>
+        <h2>Systems, integrations, and platforms.</h2>
+      </div>
+      <div class="resume-card-grid">
+        {% for project in data.projects.assignments %}
+        <article class="resume-card">
+          <span>{{ project.desc }}</span>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.tagline }}</p>
+        </article>
+        {% endfor %}
+      </div>
+      </section>
+
+      <section class="resume-section resume-grid-section">
+      <div class="section-heading">
+        <p class="eyebrow">Open Source</p>
+        <h2>Public work and reusable tools.</h2>
+      </div>
+      <div class="resume-card-grid resume-card-grid--compact">
+        {% for project in data.projects.opensource %}
+        <article class="resume-card">
+          <h3><a href="{{ project.link }}">{{ project.title }}</a></h3>
+          <p>{{ project.tagline }}</p>
+        </article>
+        {% endfor %}
+      </div>
+      </section>
+
+      <section class="resume-section resume-grid-section">
+      <div class="section-heading">
+        <p class="eyebrow">Education</p>
+        <h2>Academic foundation.</h2>
+      </div>
+      <div class="education-list">
+        {% for education in data.education %}
+        <article>
+          <h3>{{ education.degree }}</h3>
+          <p>{{ education.university }}</p>
+          <span>{{ education.time }}</span>
+          {% if education.details %}
+          <div>{{ education.details | markdownify }}</div>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>
+      </section>
+    </div>
+
+    <aside class="contact-panel" aria-label="Contact and profile links">
+      <img src="{{ site.baseurl }}/assets/images/{{ data.sidebar.avatar }}" alt="{{ data.sidebar.name }}">
+      <a href="mailto:{{ data.sidebar.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i>{{ data.sidebar.email }}</a>
+      <a href="https://{{ data.sidebar.website }}"><i class="fa-solid fa-globe" aria-hidden="true"></i>{{ data.sidebar.website }}</a>
+      <a href="https://www.linkedin.com/in/{{ data.sidebar.linkedin }}/"><i class="fa-brands fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+      <a href="https://github.com/{{ data.sidebar.github }}"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a>
+    </aside>
+  </main>
 
 {% include scripts.html %}
 </body>
-
 </html>
-

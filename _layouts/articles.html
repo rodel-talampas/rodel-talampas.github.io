@@ -2,19 +2,52 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<html lang="en">
 {% include head.html %}
-<body>
-  <div class="wrapper">
-    <div class="page-wrapper">
-        {{ content }}
+<body class="modern-site articles-page">
+  {% assign articles = site.data.articles.list %}
+  <nav class="site-nav site-nav--solid" aria-label="Primary">
+    <a class="site-nav__brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <div class="site-nav__links">
+      <a href="{{ site.baseurl }}/">Home</a>
+      <a href="{{ site.baseurl }}/resume/">Resume</a>
+      <a href="{{ site.baseurl }}/about/">About</a>
+      <a href="mailto:{{ site.email }}">Contact</a>
     </div>
-  </div>
+  </nav>
+
+  <main class="articles-shell">
+    <section class="articles-hero">
+      <p class="eyebrow">Articles</p>
+      <h1>Technical notes, setup guides, and delivery lessons.</h1>
+      <p>
+        A collection of practical writing across developer setup, cloud monitoring, integration design,
+        source control, and operational tooling.
+      </p>
+    </section>
+
+    {% if articles.papers %}
+    <section class="article-list" aria-label="Article list">
+      {% for article in articles.papers %}
+      <article class="article-card">
+        <div>
+          <span>{% if article.link contains 'http' %}External article{% else %}Site article{% endif %}</span>
+          <h2>
+            <a href="{% if article.link contains 'http' %}{{ article.link }}{% else %}{{ site.baseurl }}/articles/{{ article.link }}{% endif %}">
+              {{ article.title }}
+            </a>
+          </h2>
+          <p>{{ article.description }}</p>
+        </div>
+        <a class="article-card__link" href="{% if article.link contains 'http' %}{{ article.link }}{% else %}{{ site.baseurl }}/articles/{{ article.link }}{% endif %}" aria-label="Read {{ article.title }}">
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </article>
+      {% endfor %}
+    </section>
+    {% endif %}
+  </main>
 
 {% include scripts.html %}
 </body>
-
 </html>
-
