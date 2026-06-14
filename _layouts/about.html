@@ -1,13 +1,70 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 <html lang="en">
-  {% include head.html %}
-  <body>
-    <div class="wrapper">
-      <div class="page-wrapper">
-        {% include about.html %}
-      </div>
+{% include head.html %}
+<body class="modern-site about-page">
+  <nav class="site-nav site-nav--solid" aria-label="Primary">
+    <a class="site-nav__brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <div class="site-nav__links">
+      <a href="{{ site.baseurl }}/">Home</a>
+      <a href="{{ site.baseurl }}/resume/">Resume</a>
+      <a href="{{ site.baseurl }}/articles/">Articles</a>
+      <a href="mailto:{{ site.email }}">Contact</a>
     </div>
-  </body>
-  {% include scripts.html %}
+  </nav>
+
+  <main class="about-shell">
+    <section class="about-hero">
+      <p class="eyebrow">About this site</p>
+      <h1>A working portfolio for engineering leadership, delivery lessons, and practical systems thinking.</h1>
+      <p>
+        This site is the professional home of Rodel Manalo Talampas. It brings together a resume, selected project work,
+        technical writing, and career notes for people who want to understand how I approach cloud platforms,
+        integrations, team leadership, and enterprise delivery.
+      </p>
+    </section>
+
+    <section class="about-grid" aria-label="Site overview">
+      <article>
+        <i class="fa-solid fa-address-card" aria-hidden="true"></i>
+        <h2>Resume and profile</h2>
+        <p>
+          The resume page captures my background across engineering management, solution architecture, software delivery,
+          and cloud-based transformation work.
+        </p>
+      </article>
+      <article>
+        <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+        <h2>Projects and skills</h2>
+        <p>
+          The project sections highlight representative systems, integrations, platforms, and tools I have delivered
+          across enterprise environments.
+        </p>
+      </article>
+      <article>
+        <i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
+        <h2>Articles and notes</h2>
+        <p>
+          The articles area is for practical notes on development setup, cloud integrations, observability, and software
+          delivery topics worth documenting.
+        </p>
+      </article>
+    </section>
+
+    <section class="about-statement">
+      <div>
+        <p class="eyebrow">Intent</p>
+        <h2>Built as a living record, not a static brochure.</h2>
+      </div>
+      <p>
+        The site will continue to evolve as I add clearer project summaries, technical write-ups, and examples of how
+        I think about architecture, delivery tradeoffs, and leading teams through complex implementation work.
+      </p>
+    </section>
+  </main>
+
+{% include scripts.html %}
+</body>
 </html>
