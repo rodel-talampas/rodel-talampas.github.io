@@ -399,6 +399,17 @@
   overflow-wrap: anywhere;
 }
 
+.contact-panel__pdf {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  display: inline-flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 12px;
+  width: fit-content;
+}
+
 .resume-section {
   border-top: 1px solid var(--line);
   padding: clamp(46px, 7vw, 84px) 0 0;
@@ -722,5 +733,22 @@
   .resume-card,
   .education-list article {
     padding: 20px;
+  }
+}
+
+@media print {
+  .site-nav,
+  .contact-panel__pdf {
+    display: none !important;
+  }
+
+  .resume-shell {
+    padding: 0;
+  }
+
+  .contact-panel {
+    background: transparent;
+    box-shadow: none;
+    position: static;
   }
 }
