@@ -297,43 +297,75 @@ projects:
         tagline: This is a POC template to create an RDS Server and IAM User that can access the said database server via AWS IAM Policy
 
     assignments:
-      - title: oOh!Media Payment Integration
+      - title: oOh!Trading Platform User Management
+        desc: Platform Migration
+        tagline: Migration of user management from a legacy ORM application within the oOh!Trading Platform itself.
+
+      - title: Datadog Rollout
+        desc: Observability Migration
+        tagline: APM migration from Dynatrace to Datadog.
+
+      - title: Sunrise - 2026 oOh!media HRIS and Payroll Integration
+        desc: Human Resources
+        tagline: A 3rd party HRIS and payroll integration involving employee and payroll data flow between Workday, ADP, and NetSuite using AWS Transfer and event-driven services.
+
+      - title: Member Site (3rd Party Site Owner) - OTP and Avails Integration
+        desc: Sales and Delivery
+        tagline: Integration and scheduling between third-party site owners and the oOh!Trading Platform and Avails, automated through AWS event-driven services.
+
+      - title: OMA (Outdoor Media Association) MOVE 2.0 - Integration
+        desc: Audience Measurement
+        tagline: Integration between the OMA MOVE 2.0 audience measurement system and oOh!media digital frames using AWS event-driven services.
+
+      - title: oOh!Plan - OTP and Avails Integration
+        desc: Sales and Delivery
+        tagline: The next generation trading system integration communicating with the current oOh!Trading Platform and Avails API services.
+
+      - title: Bingo - KPMG Chatbot KymChat Integration
+        desc: AI and Automation
+        tagline: A tenant-based AI application deployed on Azure Cloud using Node, C#, and Python services for KPMG chatbot integration.
+
+      - title: oOh!Trading and NetSuite Integration
+        desc: Finance
+        tagline: Integration between the trading platform, NetSuite, and Westpac for invoice, contract, and finance transaction data transfer.
+
+      - title: oOh!media Payment Integration
         desc: Finance 
-        tagline: It is a 3rd Party integration involving Payment Data to and from oOh!Media Payment System, involving the likes of Netsuite and Westpac. It revolves using AWS Transfer and AWS Lambdas.
+        tagline: It is a 3rd Party integration involving Payment Data to and from oOh!media Payment System, involving the likes of Netsuite and Westpac. It revolves using AWS Transfer and AWS Lambdas.
 
-      - title: oOh!Media HR Integration
+      - title: Genie - 2020 oOh!media HR Integration
         desc: People and Culture 
-        tagline: It is a 3rd Party integration involving Employee Data to and from oOh!Media HR System, involving the likes of CultureAmp, Westpac and Livehire. It revolves using AWS Transfer and AWS Lambdas.
+        tagline: It is a 3rd Party integration involving Employee Data to and from oOh!media HR System, involving the likes of CultureAmp, Westpac and Livehire. It revolves using AWS Transfer and AWS Lambdas.
 
-      - title: oOh!Media HR Warehouse
+      - title: oOh!media HR Warehouse
         desc: People and Culture Warehouse 
         tagline: Using the same AWS Transfer integration, 3rd Party, HR Systems that has integrated with HR, will send Historical Employee Data and internal process will convert it to Data Lake
 
-      - title: oOh!Media Trading Platform (OTP)
+      - title: oOh!Trading Platform (OTP)
         desc: Sales and Delivery 
         tagline: It is an internal nodejs web/api application tool used by the sales team to book ads within different  sites and location here in Australia and New Zealand
 
-      - title: oOh!Media Avails System
+      - title: oOh!Avails
         desc: Sales and Delivery
         tagline: It is an internal nodejs rest api application tool used to manage booking schedules      of the sites booked within the OTP Sytem
      
-      - title: oOh!Media EKS Migration
+      - title: oOh!media EKS Migration
         desc: DevOps 
         tagline: It’s an AWS EKS Implementation to migrate in-house Kube Applications into an AWS EKS Service
 
-      - title: oOh!Media XRay
+      - title: oOh!media XRay
         desc: DevOps
         tagline: This is the Dynatrace Monitoring implemenation replacing existing APM Tools
 
-      - title: oOh!Scheduling
+      - title: oOh!Schedule
         desc: Delivery  
         tagline: It is an internal Fullstack NodeJS Application used by the delivery team to schedule ads to BroadSign.
 
-      - title: oOh!Media Inventory System
+      - title: oOh!Inventory
         desc: Sales and Delivery 
         tagline: It is an internal python ORM Flask web application tool used by the sales team to managed leased sites
 
-      - title: oOh!Media Snyk Integration 
+      - title: oOh!media Snyk Integration 
         desc: DevOps 
         tagline: It’s a Snyk Vulnerability Checks executed as part of the CI/CD Pipeline. This project has been replaced by Dynatrace.
 
@@ -394,7 +426,7 @@ projects:
         desc: Inttra Process and ETL
         tagline: This is a Java application that reads FTP’d file in EDIFACT or ANSI format that updates location information of Containers and Container Items handled within the INTTRA Application Network (e.g. Shipping Instructions/Booking)
 
-      - title: RCOM
+      - title: Retek Customer Order Management (RCOM)
         desc: Retek Customer
         tagline: Retek’s Customer Order Manager built using JBoss 2.0 and EJB 2.0
 
