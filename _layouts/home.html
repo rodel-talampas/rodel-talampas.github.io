@@ -62,6 +62,10 @@
           <strong>20+</strong>
           <span>engineers mentored</span>
         </div>
+        <div class="home-hero__fact--visitor">
+          <strong data-visitor-count>Loading</strong>
+          <span>visitors</span>
+        </div>
       </div>
     </section>
 
@@ -106,6 +110,36 @@
       </div>
     </section>
   </main>
+  <script>
+    (function () {
+      var countEl = document.querySelector('[data-visitor-count]');
+      if (!countEl) return;
+
+      var isLocalHost = ['localhost', '127.0.0.1', '::1'].indexOf(window.location.hostname) !== -1 ||
+        window.location.protocol === 'file:';
+
+      if (isLocalHost) {
+        countEl.textContent = '1';
+        return;
+      }
+
+      var endpoint = 'https://api.countapi.xyz/hit/rodel-talampas-github-io/home';
+
+      fetch(endpoint, { cache: 'no-store' })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error('Counter request failed');
+          }
+          return response.json();
+        })
+        .then(function (data) {
+          countEl.textContent = Number(data.value).toLocaleString();
+        })
+        .catch(function () {
+          countEl.textContent = 'Unavailable';
+        });
+    })();
+  </script>
   {% include scripts.html %}
 </body>
 </html>
