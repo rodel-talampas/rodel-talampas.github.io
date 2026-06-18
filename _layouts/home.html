@@ -115,6 +115,9 @@
       var countEl = document.querySelector('[data-visitor-count]');
       if (!countEl) return;
       var counterApiToken = {{ site.data.counter_api_dev.token | jsonify }};
+      if (counterApiToken) {
+        counterApiToken = String(counterApiToken).trim();
+      }
 
       var isLocalHost = ['localhost', '127.0.0.1', '::1'].indexOf(window.location.hostname) !== -1 ||
         window.location.protocol === 'file:';
@@ -124,11 +127,12 @@
         return;
       }
 
-      var endpoint = 'https://api.counterapi.dev/v2/rodel-talampas-net/home/up';
+      var endpoint = 'https://api.counterapi.dev/v2/rodel-talampas-net/rodel-talampas/up';
       var fetchOptions = { cache: 'no-store' };
 
       if (counterApiToken) {
         fetchOptions.headers = {
+          Accept: 'application/json',
           Authorization: 'Bearer ' + counterApiToken
         };
       }
@@ -136,7 +140,9 @@
       fetch(endpoint, fetchOptions)
         .then(function (response) {
           if (!response.ok) {
-            throw new Error('Counter request failed');
+            return response.text().then(function (body) {
+              throw new Error('Counter request failed: ' + response.status + ' ' + body);
+            });
           }
           return response.json();
         })
@@ -144,7 +150,8 @@
           var value = data && (data.data || data.value);
           countEl.textContent = Number(value || 0).toLocaleString();
         })
-        .catch(function () {
+        .catch(function (error) {
+          console.error(error);
           countEl.textContent = '0';
         });
     })();
