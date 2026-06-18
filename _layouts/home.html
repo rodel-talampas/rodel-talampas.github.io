@@ -63,7 +63,7 @@
           <span>engineers mentored</span>
         </div>
         <div class="home-hero__fact--visitor">
-          <strong>{{ site.data.counter_api_dev.count | default: 0 }}</strong>
+          <strong data-visitor-count>Loading</strong>
           <span>visitors</span>
         </div>
       </div>
@@ -110,6 +110,43 @@
       </div>
     </section>
   </main>
+  <script>
+    (function () {
+      var countEl = document.querySelector('[data-visitor-count]');
+      if (!countEl) return;
+
+      var isLocalHost = ['localhost', '127.0.0.1', '::1'].indexOf(window.location.hostname) !== -1 ||
+        window.location.protocol === 'file:';
+
+      if (isLocalHost) {
+        countEl.textContent = '1';
+        return;
+      }
+
+      fetch('https://api.counterapi.dev/v2/rodel-talampas-home/rodel-talampas-public/up', {
+        cache: 'no-store',
+        headers: {
+          Accept: 'application/json'
+        }
+      })
+        .then(function (response) {
+          if (!response.ok) {
+            return response.text().then(function (body) {
+              throw new Error('Counter request failed: ' + response.status + ' ' + body);
+            });
+          }
+          return response.json();
+        })
+        .then(function (data) {
+          var value = data && data.data && data.data.up_count;
+          countEl.textContent = Number(value || 0).toLocaleString();
+        })
+        .catch(function (error) {
+          console.error(error);
+          countEl.textContent = '0';
+        });
+    })();
+  </script>
   {% include scripts.html %}
 </body>
 </html>
