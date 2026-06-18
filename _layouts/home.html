@@ -114,6 +114,7 @@
     (function () {
       var countEl = document.querySelector('[data-visitor-count]');
       if (!countEl) return;
+      var counterApiToken = {{ site.data.counter_api_dev.token | jsonify }};
 
       var isLocalHost = ['localhost', '127.0.0.1', '::1'].indexOf(window.location.hostname) !== -1 ||
         window.location.protocol === 'file:';
@@ -124,8 +125,15 @@
       }
 
       var endpoint = 'https://api.counterapi.dev/v2/rodel-talampas-net/home/up';
+      var fetchOptions = { cache: 'no-store' };
 
-      fetch(endpoint, { cache: 'no-store' })
+      if (counterApiToken) {
+        fetchOptions.headers = {
+          Authorization: 'Bearer ' + counterApiToken
+        };
+      }
+
+      fetch(endpoint, fetchOptions)
         .then(function (response) {
           if (!response.ok) {
             throw new Error('Counter request failed');
