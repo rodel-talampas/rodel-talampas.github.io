@@ -123,7 +123,7 @@
         return;
       }
 
-      var endpoint = 'https://api.countapi.xyz/hit/rodel-talampas-github-io/home';
+      var endpoint = 'https://api.counterapi.dev/v2/rodel-talampas-net/home/up';
 
       fetch(endpoint, { cache: 'no-store' })
         .then(function (response) {
@@ -133,10 +133,11 @@
           return response.json();
         })
         .then(function (data) {
-          countEl.textContent = Number(data.value).toLocaleString();
+          var value = data && (data.data || data.value);
+          countEl.textContent = Number(value || 0).toLocaleString();
         })
         .catch(function () {
-          countEl.textContent = 'Unavailable';
+          countEl.textContent = '0';
         });
     })();
   </script>
