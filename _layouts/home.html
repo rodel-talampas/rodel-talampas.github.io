@@ -147,7 +147,12 @@
           return response.json();
         })
         .then(function (data) {
-          var value = data && (data.data || data.value);
+          var value = data;
+
+          if (value && typeof value === 'object' && value.data) {
+            value = value.data.up_count || value.data.value || value.data.count || value.data.result;
+          }
+
           countEl.textContent = Number(value || 0).toLocaleString();
         })
         .catch(function (error) {
