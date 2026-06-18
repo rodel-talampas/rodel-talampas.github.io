@@ -44,10 +44,10 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Prepare CounterAPI token
+      - name: Prepare CounterAPI count
         run: |
           if [ -n "${COUNTER_API_DEV_TOKEN:-}" ]; then
-            ruby -e 'require "yaml"; File.write("_data/counter_api_dev.yml", {"token" => ENV.fetch("COUNTER_API_DEV_TOKEN")}.to_yaml)'
+            ruby -rjson -rnet/http -ruri -e 'require "yaml"; uri = URI("https://api.counterapi.dev/v2/rodel-talampas-net/rodel-talampas/"); req = Net::HTTP::Get.new(uri); req["Authorization"] = "Bearer #{ENV.fetch("COUNTER_API_DEV_TOKEN")}"; req["Accept"] = "application/json"; res = Net::HTTP.start(uri.host, uri.port, use_ssl: true) { |http| http.request(req) }; abort("CounterAPI request failed: #{res.code} #{res.body}") unless res.is_a?(Net::HTTPSuccess); payload = JSON.parse(res.body); count = payload.dig("data", "up_count") || payload.dig("data", "value") || payload["value"] || payload["count"] || 0; File.write("_data/counter_api_dev.yml", {"count" => count.to_i}.to_yaml)'
           else
             rm -f _data/counter_api_dev.yml
           fi
