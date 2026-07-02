@@ -79,23 +79,6 @@ profile:
       This website has been created using Jekyll and a combination of different Jekyll themes, primarily patterned from [bbrattoli.github.io](https://github.com/bbrattoli/bbrattoli.github.io).
       Other themes merged into this site are [murraco](https://github.com/murraco/jekyll-theme-minimal-resume) and [mattcouchman](https://github.com/mattcouchman/jekyll-resume).
 
-career-profile:
-    title: Career Profile
-    summary: |
-      Currently working as the Technical Lead / Solutions Architect at oOh!media. After graduating at De La Salle University 
-      Dasmarinas (Cavite, Philippines) in 1997, I ventured into Teaching to share my knowledge with the new breed of Computer 
-      Scientists. The call of the IT Industry though snatched me away from Teaching in 2000. I climbed the ranks from there on.
-      Started with VB6 and jumped to Java for 15 years before being language-agnostic (Python, Node.JS, Terraform, Cloudformation, YAML)
-      shifting to cloud-based technologies.
-
-news:
-    title: News
-    intro: |
-           
-    posts:
-        - time: 202x
-          title: Test
-
 
 
 education:
@@ -110,13 +93,6 @@ education:
       time: 1993 June - 1997 April
       details: |
         - Graduated as Cum Laude with a GPA of 94%. 
-      
-
-educationcomplete:
-    - degree: Bachelor of Science in Computer Science
-      university: Philippines
-      time: 1993 June - 1997 April
-      details: |     
 
 experiences:
     - role: Engineering Manager / Solutions Architect

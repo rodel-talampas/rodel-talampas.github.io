@@ -8,6 +8,18 @@ list:
       
 
     papers:
+      - title: Codex aka ChatGPT's AI Agent
+        description: Notes about using Codex as an AI agent
+        link: https://dev.to/limacon23/codex-aka-chatgpts-ai-agent-2g8l
+
+      - title: Google SRE Review - Cheat Sheet
+        description: Review notes and cheat sheet for Google SRE concepts
+        link: https://dev.to/limacon23/google-sre-review-cheat-sheet-2hih
+
+      - title: Google SRE Review - Points taken
+        description: Key points and takeaways from Google SRE review notes
+        link: https://dev.to/limacon23/google-sre-review-points-taken-f66
+
       - title: Developer Setup for Mac
         description: Compilation of Installation Scripts that install Developer Tools in a Mac System
         # link: developer_setup_mac.html 
@@ -19,12 +31,12 @@ list:
         link: https://dev.to/limacon23/postgres-database-in-a-docker-container-367g
 
       - title: Dynatrace Lambda Ingestion
-        description: Use Dynatrace to Monitor AWS Lambda
-        link: dynatrace_lambda_ingestion.html 
+        description: Dynatrace Monitoring for AWS Lambda
+        link: https://dev.to/limacon23/dynatrace-monitoring-for-aws-lambda-2e4j
 
       - title: Dynatrace Custom Events
-        description: Sending Event Information to Dynatrace
-        link: dynatrace_event_api.html 
+        description: Sending Custom Error Events to Dynatrace
+        link: https://dev.to/limacon23/sending-custom-error-events-to-dynatrace-529l
 
       - title: Authorisation Design (node, azure, and mongodb)
         description: Authorisation Design using nodejs, azure AD and mongoDb

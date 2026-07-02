@@ -27,23 +27,66 @@ layout: compress
     </section>
 
     {% if articles.papers %}
-    <section class="article-list" aria-label="Article list">
-      {% for article in articles.papers %}
-      <article class="article-card">
-        <div>
-          <span>{% if article.link contains 'http' %}External article{% else %}Site article{% endif %}</span>
-          <h2>
-            <a href="{% if article.link contains 'http' %}{{ article.link }}{% else %}{{ site.baseurl }}/articles/{{ article.link }}{% endif %}">
-              {{ article.title }}
-            </a>
-          </h2>
-          <p>{{ article.description }}</p>
+    {% assign featured_articles = articles.papers | slice: 0, 5 %}
+    <section class="articles-split" aria-label="Article list">
+      <div class="articles-featured">
+        <div class="articles-section-heading">
+          <p class="eyebrow">Featured</p>
+          <h2>Top five articles.</h2>
         </div>
-        <a class="article-card__link" href="{% if article.link contains 'http' %}{{ article.link }}{% else %}{{ site.baseurl }}/articles/{{ article.link }}{% endif %}" aria-label="Read {{ article.title }}">
-          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-        </a>
-      </article>
-      {% endfor %}
+        <div class="article-grid">
+          {% for article in featured_articles %}
+          {% assign article_url = article.link %}
+          {% if article.link contains 'http' %}
+          {% assign article_url = article.link %}
+          {% else %}
+          {% assign article_url = site.baseurl | append: '/articles/' | append: article.link %}
+          {% endif %}
+          <article class="article-card">
+            <div class="article-card__body">
+              <span>{% if article.link contains 'http' %}External article{% else %}Site article{% endif %}</span>
+              <h2>
+                <a href="{{ article_url }}">{{ article.title }}</a>
+              </h2>
+              <p>{{ article.description }}</p>
+            </div>
+            <div class="article-card__footer">
+              <a class="article-card__link" href="{{ article_url }}" aria-label="Read {{ article.title }}">
+                <span>Read article</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="articles-compact">
+        <div class="articles-section-heading">
+          <p class="eyebrow">All Articles</p>
+          <h2>Complete list.</h2>
+        </div>
+        <div class="article-compact-list">
+          {% for article in articles.papers %}
+          {% assign article_url = article.link %}
+          {% if article.link contains 'http' %}
+          {% assign article_url = article.link %}
+          {% else %}
+          {% assign article_url = site.baseurl | append: '/articles/' | append: article.link %}
+          {% endif %}
+          <article class="article-compact-card">
+            <div>
+              <span>{% if article.link contains 'http' %}External article{% else %}Site article{% endif %}</span>
+              <h3><a href="{{ article_url }}">{{ article.title }}</a></h3>
+              <p>{{ article.description }}</p>
+            </div>
+            <a class="article-compact-card__link" href="{{ article_url }}" aria-label="Read {{ article.title }}">
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
     </section>
     {% endif %}
   </main>
