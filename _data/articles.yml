@@ -16,6 +16,10 @@ list:
         description: Review notes and cheat sheet for Google SRE concepts
         link: https://dev.to/limacon23/google-sre-review-cheat-sheet-2hih
 
+      - title: Local Kubernetes Setup
+        description: Setup a local Kubernetes cluster for development and testing
+        link: https://dev.to/limacon23/local-kubernetes-cluster-3jm7
+
       - title: Google SRE Review - Points taken
         description: Key points and takeaways from Google SRE review notes
         link: https://dev.to/limacon23/google-sre-review-points-taken-f66
