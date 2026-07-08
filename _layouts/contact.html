@@ -1,0 +1,33 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body class="modern-site contact-page">
+  <nav class="site-nav site-nav--solid" aria-label="Primary">
+    <a class="site-nav__brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <div class="site-nav__links">
+      <a href="{{ site.baseurl }}/">Home</a>
+      <a href="{{ site.baseurl }}/resume/">Resume</a>
+      <a href="{{ site.baseurl }}/about/">About</a>
+      <a href="{{ site.baseurl }}/articles/">Articles</a>
+      <a href="{{ site.baseurl }}/contact/" aria-current="page">Contact</a>
+    </div>
+  </nav>
+
+  <main class="contact-shell">
+    <section class="contact-copy">
+      <p class="eyebrow">Contact</p>
+      <h2>Leave your message.</h2>
+      <p>We'd love to hear from you. Please fill out the form below and we'll get back to you as soon as possible.</p>
+    </section>
+
+    <section class="contact-card" aria-label="Message thread">
+      {{ content }}
+    </section>
+  </main>
+
+{% include scripts.html %}
+</body>
+</html>
