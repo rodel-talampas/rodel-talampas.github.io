@@ -1,7 +1,21 @@
 ---
-
 ---
 
 @charset "utf-8";
+
+{% case site.theme_skin | default: 'blue' %}
+{% when 'turquoise' %}
+@use "variables" with ($theme-color: #4CAC9D);
+{% when 'green' %}
+@use "variables" with ($theme-color: #5BB66F);
+{% when 'berry' %}
+@use "variables" with ($theme-color: #A15277);
+{% when 'orange' %}
+@use "variables" with ($theme-color: #FDA246);
+{% when 'ceramic' %}
+@use "variables" with ($theme-color: #4B6A78);
+{% else %}
+@use "variables" with ($theme-color: #42A8C0);
+{% endcase %}
 
 @use "default";
