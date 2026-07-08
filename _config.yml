@@ -23,7 +23,6 @@ port_bimage_large: rodel_large_portrait.png
 
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
 

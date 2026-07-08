@@ -82,13 +82,35 @@
   color: rgba(255, 255, 255, 0.84);
   font-size: 14px;
   font-weight: 700;
+  transition: transform 180ms ease, color 180ms ease;
 }
 
 .site-nav__links a[aria-current="page"] {
   color: var(--gold);
 }
 
+.home-page .site-nav__links a[aria-current="page"] {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.site-nav__current {
+  color: rgba(255, 255, 255, 0.84);
+  cursor: default;
+  font-size: 14px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
 .site-nav--solid .site-nav__links a {
+  color: var(--muted);
+}
+
+.site-nav__links a:hover,
+.site-nav__links a:focus-visible {
+  transform: scale(1.04);
+}
+
+.site-nav--solid .site-nav__current {
   color: var(--muted);
 }
 
